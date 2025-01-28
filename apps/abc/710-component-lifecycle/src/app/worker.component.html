@@ -1,0 +1,13 @@
+<article>
+  <header>Worker List: {{ workerList.length }}</header>
+
+  <ul>
+    @for (w of workerList; track w.id) {
+      <li>
+        {{ w.firstName }}
+      </li>
+    }
+  </ul>
+
+  {{ label }}
+</article>

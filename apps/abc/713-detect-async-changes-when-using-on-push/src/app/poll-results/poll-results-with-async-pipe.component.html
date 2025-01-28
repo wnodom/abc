@@ -1,0 +1,8 @@
+<article>
+  <header>What's Your Favorite Donut?</header>
+  <ul>
+    @for (pollResult of pollResults | async; track pollResult.name) {
+      <li>{{ pollResult.name }}: {{ pollResult.votes }}</li>
+    }
+  </ul>
+</article>

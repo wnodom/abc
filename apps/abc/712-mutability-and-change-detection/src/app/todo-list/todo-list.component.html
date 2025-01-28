@@ -1,0 +1,10 @@
+<ul class="collection todo-list">
+  @for (todo of todoItems; track todo) {
+    <li>
+      <app-item-detail
+        [item]="todo"
+        (toggle)="toggleItem.emit($index)"
+      />
+    </li>
+  }
+</ul>
