@@ -115,7 +115,8 @@
           "buildTarget": "abc-734-signals-rxjs:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

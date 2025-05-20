@@ -115,7 +115,8 @@
           "buildTarget": "abc-809-legacy-api-via-http-promises:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

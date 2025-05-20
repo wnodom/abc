@@ -115,7 +115,8 @@
           "buildTarget": "abc-708-reactive-control:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

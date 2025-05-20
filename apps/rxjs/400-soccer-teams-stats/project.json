@@ -115,7 +115,8 @@
           "buildTarget": "rxjs-400-soccer-teams-stats:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

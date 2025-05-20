@@ -2,6 +2,18 @@ import { ExecutorContext, runExecutor } from '@nx/devkit';
 
 import { ServeStepExecutorSchema } from './schema';
 
+const executorOptionOverrides: Record<string, string | number> = {};
+
+// XXX: Hopefully-temporary workaround to serve applications within
+// a devcontainer so that they're visible outside the container.
+if (process.env['DEVCONTAINER']) {
+  executorOptionOverrides['host'] = '0.0.0.0';
+  console.log(
+    'Running in devcontainer with executor option overrides',
+    executorOptionOverrides
+  );
+}
+
 export default async function serveStepExecutor(
   options: ServeStepExecutorSchema,
   context: ExecutorContext
@@ -38,7 +50,7 @@ export default async function serveStepExecutor(
           target: targetName,
           configuration: context.configurationName
         },
-        {},
+        executorOptionOverrides,
         context
       );
 

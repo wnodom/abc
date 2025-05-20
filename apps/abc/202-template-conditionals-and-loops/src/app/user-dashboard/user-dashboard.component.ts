@@ -20,8 +20,7 @@ const todoList = [
 
 @Component({
   selector: 'app-user-dashboard',
-  templateUrl: './user-dashboard.component.html',
-  standalone: true
+  templateUrl: './user-dashboard.component.html'
 })
 export default class UserDashboardComponent {
   showProfile = true;

@@ -115,7 +115,8 @@
           "buildTarget": "abc-705-complex-query-params:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

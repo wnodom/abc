@@ -115,7 +115,8 @@
           "buildTarget": "abc-711-change-detection-strategies-why-on-push:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

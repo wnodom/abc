@@ -115,7 +115,8 @@
           "buildTarget": "abc-703-custom-async-validators:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

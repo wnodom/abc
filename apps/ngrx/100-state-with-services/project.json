@@ -121,7 +121,8 @@
           "buildTarget": "ngrx-100-state-with-services:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

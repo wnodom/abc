@@ -115,7 +115,8 @@
           "buildTarget": "abc-805-example-binding-to-svg:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

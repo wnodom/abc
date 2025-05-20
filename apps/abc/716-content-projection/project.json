@@ -115,7 +115,8 @@
           "buildTarget": "abc-716-content-projection:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

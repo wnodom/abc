@@ -121,7 +121,8 @@
           "buildTarget": "ngrx-202-router-store:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

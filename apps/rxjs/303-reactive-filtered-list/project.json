@@ -115,7 +115,8 @@
           "buildTarget": "rxjs-303-reactive-filtered-list:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

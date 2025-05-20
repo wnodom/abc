@@ -1,16 +1,13 @@
-import {
-  Directive,
-  HostBinding,
-  Input,
-  OnDestroy
-} from '@angular/core';
+import { Directive, Input, OnDestroy } from '@angular/core';
 
 @Directive({
   selector: '[appBounce]',
-  standalone: true
+  host: {
+    '[style.transform]': 'transform'
+  }
 })
 export class BounceDirective implements OnDestroy {
-  @HostBinding('style.transform') transform = '';
+  transform = '';
   // Note that this input is not required, because the default is
   // enough
   @Input() speed = 25;

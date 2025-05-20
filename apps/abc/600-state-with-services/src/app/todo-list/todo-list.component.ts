@@ -9,8 +9,7 @@ import { Task } from '../types';
 
 @Component({
   selector: 'app-todo-list',
-  templateUrl: './todo-list.component.html',
-  standalone: true
+  templateUrl: './todo-list.component.html'
 })
 export class ToDoListComponent {
   @Input({ required: true }) list!: Task[];

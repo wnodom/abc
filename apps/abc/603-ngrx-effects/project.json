@@ -121,7 +121,8 @@
           "buildTarget": "abc-603-ngrx-effects:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

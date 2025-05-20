@@ -22,8 +22,7 @@ const employees = [
 
 @Component({
   selector: 'app-employee-browser',
-  templateUrl: './employee-browser.component.html',
-  standalone: true
+  templateUrl: './employee-browser.component.html'
 })
 export default class EmployeeBrowserComponent {
   employeeList = employees;

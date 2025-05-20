@@ -118,7 +118,8 @@
           "buildTarget": "abc-816-legacy-switch-structural-directive:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

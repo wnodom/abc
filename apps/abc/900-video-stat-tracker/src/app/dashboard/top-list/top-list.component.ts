@@ -13,8 +13,7 @@ import { Video } from '../dashboard.types';
 @Component({
   selector: 'vst-top-list',
   templateUrl: './top-list.component.html',
-  styleUrl: './top-list.component.scss',
-  standalone: true
+  styleUrl: './top-list.component.scss'
 })
 export class TopListComponent {
   @Input({ required: true }) topList!: Video[];

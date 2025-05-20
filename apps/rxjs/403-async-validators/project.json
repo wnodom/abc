@@ -115,7 +115,8 @@
           "buildTarget": "rxjs-403-async-validators:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

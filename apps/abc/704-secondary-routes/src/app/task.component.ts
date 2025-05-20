@@ -11,7 +11,6 @@ import { Component } from '@angular/core';
     >
       <h5>Here are some tasks</h5>
     </div>
-  `,
-  standalone: true
+  `
 })
 export class TaskComponent {}

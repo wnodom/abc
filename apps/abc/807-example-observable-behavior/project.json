@@ -115,7 +115,8 @@
           "buildTarget": "abc-807-example-observable-behavior:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

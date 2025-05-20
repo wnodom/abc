@@ -11,8 +11,7 @@ import { GraphService, Person, Relationship } from './graph.service';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  standalone: true
+  templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
   private graphService = inject(GraphService);

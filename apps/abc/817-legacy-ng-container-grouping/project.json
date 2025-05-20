@@ -118,7 +118,8 @@
           "buildTarget": "abc-817-legacy-ng-container-grouping:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

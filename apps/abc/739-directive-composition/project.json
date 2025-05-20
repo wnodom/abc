@@ -116,7 +116,8 @@
           "buildTarget": "abc-739-directive-composition:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

@@ -121,7 +121,8 @@
           "buildTarget": "ngrx-104-ngrx-effects:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

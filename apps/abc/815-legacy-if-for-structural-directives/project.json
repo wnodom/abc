@@ -113,7 +113,8 @@
           "buildTarget": "abc-815-legacy-if-for-structural-directives:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

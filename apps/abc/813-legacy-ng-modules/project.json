@@ -115,7 +115,8 @@
           "buildTarget": "abc-813-legacy-ng-modules:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

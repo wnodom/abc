@@ -6,8 +6,7 @@ import {
 } from '@angular/core';
 
 @Directive({
-  selector: '[oasisFocusInput]',
-  standalone: true
+  selector: '[oasisFocusInput]'
 })
 export class FocusInputDirective implements AfterViewInit {
   private el = inject(ElementRef);

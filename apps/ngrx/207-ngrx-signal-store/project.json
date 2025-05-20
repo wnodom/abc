@@ -128,7 +128,8 @@
           "buildTarget": "ngrx-207-ngrx-signal-store:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

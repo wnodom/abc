@@ -121,7 +121,8 @@
           "buildTarget": "ngrx-206-ngrx-data:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

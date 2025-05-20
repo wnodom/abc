@@ -115,7 +115,8 @@
           "buildTarget": "rxjs-501-ngrx-store-immutability:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

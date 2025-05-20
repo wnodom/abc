@@ -115,7 +115,8 @@
           "buildTarget": "abc-204-pipe-locales:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

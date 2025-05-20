@@ -115,7 +115,8 @@
           "buildTarget": "abc-403-observable-composing-and-chaining:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

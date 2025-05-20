@@ -14,7 +14,6 @@ import { HighlightDirective } from './highlight.directive';
       directive: BorderDirective,
       inputs: ['color: border']
     }
-  ],
-  standalone: true
+  ]
 })
 export class HighlightAndBorderDirective {}

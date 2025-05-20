@@ -115,7 +115,8 @@
           "buildTarget": "abc-709-observable-error-recovery:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

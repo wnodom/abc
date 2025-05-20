@@ -11,7 +11,6 @@ import { Component } from '@angular/core';
     >
       <h5>This is chat</h5>
     </div>
-  `,
-  standalone: true
+  `
 })
 export class ChatComponent {}

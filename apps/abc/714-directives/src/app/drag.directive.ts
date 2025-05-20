@@ -1,27 +1,33 @@
-import { Directive, HostBinding, HostListener } from '@angular/core';
+import { Directive } from '@angular/core';
 
 @Directive({
   selector: '[appMakeDraggable]',
-  standalone: true
+  host: {
+    '[style.position]': 'position',
+    '[style.padding]': 'padding',
+    '[style.color]': 'color',
+    '[style.backgroundColor]': 'backgroundColor',
+    '[style.cursor]': 'cursor',
+    '[style.left.px]': 'x',
+    '[style.top.px]': 'y',
+    '(mousedown)': 'mousedown($event)'
+  }
 })
 export class DragDirective {
-  @HostBinding('style.position') position = 'relative';
-  @HostBinding('style.padding') padding = '0.5rem';
-  @HostBinding('style.color') color = 'var(--abc-on-secondary-color)';
-  @HostBinding('style.backgroundColor') backgroundColor =
-    'var(--abc-secondary-color)';
-  @HostBinding('style.cursor') cursor = 'pointer';
-  @HostBinding('style.left.px') x = 0;
-  @HostBinding('style.top.px') y = 0;
+  position = 'relative';
+  padding = '0.5rem';
+  color = 'var(--abc-on-secondary-color)';
+  backgroundColor = 'var(--abc-secondary-color)';
+  cursor = 'pointer';
+  x = 0;
+  y = 0;
 
   private startX = 0;
   private startY = 0;
   private mm = this.mousemove.bind(this);
   private mu = this.mouseup.bind(this);
 
-  @HostListener('mousedown', ['$event']) mousedown(
-    event: MouseEvent
-  ) {
+  mousedown(event: MouseEvent) {
     event.preventDefault();
     this.startX = event.pageX - this.x;
     this.startY = event.pageY - this.y;

@@ -20,8 +20,7 @@ interface ISwapiStarShipResponse {
         <li>{{ s.name }}</li>
       }
     </ul>
-  `,
-  standalone: true
+  `
 })
 export class AppComponent {
   starships: { name: string }[] = [];

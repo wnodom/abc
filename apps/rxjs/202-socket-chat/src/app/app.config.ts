@@ -3,7 +3,6 @@ import {
   provideZoneChangeDetection
 } from '@angular/core';
 import { importProvidersFrom } from '@angular/core';
-import { provideAnimations } from '@angular/platform-browser/animations';
 import { SocketIoConfig, SocketIoModule } from 'ngx-socket-io';
 
 const config: SocketIoConfig = {
@@ -14,7 +13,6 @@ const config: SocketIoConfig = {
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
-    provideAnimations(),
     importProvidersFrom(SocketIoModule.forRoot(config))
   ]
 };

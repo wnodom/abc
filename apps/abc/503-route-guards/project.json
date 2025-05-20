@@ -115,7 +115,8 @@
           "buildTarget": "abc-503-route-guards:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

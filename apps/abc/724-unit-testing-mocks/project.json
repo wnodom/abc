@@ -115,7 +115,8 @@
           "buildTarget": "abc-724-unit-testing-mocks:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

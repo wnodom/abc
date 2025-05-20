@@ -115,7 +115,8 @@
           "buildTarget": "abc-707-reusing-observable-data:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

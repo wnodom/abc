@@ -9,8 +9,7 @@ import { Task } from '../types';
 
 @Component({
   selector: 'app-todo-list',
-  templateUrl: './todo-list.component.html',
-  standalone: true
+  templateUrl: './todo-list.component.html'
 })
 export class TodoListComponent {
   @Input() list: Task[] = [];

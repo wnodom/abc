@@ -115,7 +115,8 @@
           "buildTarget": "abc-802-example-nested-api-via-observables:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

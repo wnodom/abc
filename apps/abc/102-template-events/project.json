@@ -115,7 +115,8 @@
           "buildTarget": "abc-102-template-events:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

@@ -115,7 +115,8 @@
           "buildTarget": "rxjs-302-reactive-search:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

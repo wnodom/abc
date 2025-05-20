@@ -115,7 +115,8 @@
           "buildTarget": "abc-303-async-pipe:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

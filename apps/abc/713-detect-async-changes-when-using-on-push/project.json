@@ -115,7 +115,8 @@
           "buildTarget": "abc-713-detect-async-changes-when-using-on-push:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

@@ -5,7 +5,6 @@ import { HighlightDirective } from './highlight.directive';
 
 @Component({
   selector: 'app-highlight-and-border-di',
-  standalone: true,
   template: `
     <p>
       <span class="description">

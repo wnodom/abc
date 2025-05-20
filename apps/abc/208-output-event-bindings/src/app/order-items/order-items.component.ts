@@ -4,8 +4,7 @@ import { Item } from '../api-types';
 
 @Component({
   selector: 'app-order-items',
-  templateUrl: './order-items.component.html',
-  standalone: true
+  templateUrl: './order-items.component.html'
 })
 export class OrderItemsComponent {
   @Input({ required: true }) items!: Item[];

@@ -115,7 +115,8 @@
           "buildTarget": "abc-100-my-first-angular-app:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

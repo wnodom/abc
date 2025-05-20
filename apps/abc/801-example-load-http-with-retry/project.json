@@ -115,7 +115,8 @@
           "buildTarget": "abc-801-example-load-http-with-retry:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

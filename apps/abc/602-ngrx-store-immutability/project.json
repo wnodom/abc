@@ -115,7 +115,8 @@
           "buildTarget": "abc-602-ngrx-store-immutability:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

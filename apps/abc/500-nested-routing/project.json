@@ -115,7 +115,8 @@
           "buildTarget": "abc-500-nested-routing:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

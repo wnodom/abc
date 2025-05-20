@@ -111,7 +111,8 @@
           "buildTarget": "abc-738-input-transforms:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

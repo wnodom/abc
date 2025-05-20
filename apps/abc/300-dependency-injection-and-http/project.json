@@ -115,7 +115,8 @@
           "buildTarget": "abc-300-dependency-injection-and-http:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

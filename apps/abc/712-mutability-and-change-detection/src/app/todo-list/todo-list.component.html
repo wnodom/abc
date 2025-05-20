@@ -1,9 +1,9 @@
 <ul class="collection todo-list">
   @for (todo of todoItems; track todo) {
     <li>
-      <app-item-detail
+      <app-todo-item-detail
         [item]="todo"
-        (toggle)="toggleItem.emit($index)"
+        (toggleItem)="toggleItem.emit($index)"
       />
     </li>
   }

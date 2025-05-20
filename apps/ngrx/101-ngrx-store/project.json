@@ -121,7 +121,8 @@
           "buildTarget": "ngrx-101-ngrx-store:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

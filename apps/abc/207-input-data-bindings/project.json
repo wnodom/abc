@@ -115,7 +115,8 @@
           "buildTarget": "abc-207-input-data-bindings:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

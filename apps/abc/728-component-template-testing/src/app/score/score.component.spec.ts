@@ -70,8 +70,7 @@ describe('ScoreComponent inside a test host', () => {
     template: `
       <app-show-score [value]="score" (notify)="onNotify($event)" />
     `,
-    imports: [ScoreComponent],
-    standalone: true
+    imports: [ScoreComponent]
   })
   class TestHostComponent {
     score = 42;

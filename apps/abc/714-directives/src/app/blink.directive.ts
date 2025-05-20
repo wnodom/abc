@@ -1,18 +1,14 @@
-import {
-  Directive,
-  HostBinding,
-  Input,
-  OnDestroy,
-  OnInit
-} from '@angular/core';
+import { Directive, Input, OnDestroy, OnInit } from '@angular/core';
 import { Subscription, interval, map } from 'rxjs';
 
 @Directive({
   selector: '[appBlink]',
-  standalone: true
+  host: {
+    '[style.visibility]': 'viz'
+  }
 })
 export class BlinkDirective implements OnDestroy, OnInit {
-  @HostBinding('style.visibility') viz = 'visible';
+  viz = 'visible';
   // Note that this input is not required
   @Input() set speed(rawSpeed: number | string) {
     this.stop();

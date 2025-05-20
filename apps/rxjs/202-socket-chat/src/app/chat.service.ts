@@ -9,7 +9,7 @@ import { Message } from './types';
 export class ChatService {
   private socket = inject(Socket);
 
-  messages = this.socket.fromEvent<Message[]>('chat');
+  messages = this.socket.fromEvent<Message[], 'chat'>('chat');
 
   sendChat(message: Message) {
     this.socket.emit('chat', message, (x: unknown) =>

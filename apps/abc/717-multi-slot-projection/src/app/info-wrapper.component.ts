@@ -15,8 +15,7 @@ import { Component } from '@angular/core';
         <ng-content select="app-info-wrapper-content"></ng-content>
       </article>
     </article>
-  `,
-  standalone: true
+  `
 })
 export class InfoWrapperComponent {}
 
@@ -24,7 +23,6 @@ export class InfoWrapperComponent {}
   selector: 'app-info-wrapper-heading, app-info-wrapper-content',
   template: `
     <ng-content></ng-content>
-  `,
-  standalone: true
+  `
 })
 export class InfoWrapperChildrenComponent {}

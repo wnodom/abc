@@ -13,8 +13,7 @@ import { Worker, WorkersService } from './workers.service';
 
 @Component({
   selector: 'app-worker-cmp',
-  templateUrl: './worker.component.html',
-  standalone: true
+  templateUrl: './worker.component.html'
 })
 export class WorkerComponent implements OnInit, OnChanges, OnDestroy {
   @Input({ required: true }) label!: string;

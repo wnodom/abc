@@ -4,7 +4,6 @@ import {
   provideZoneChangeDetection
 } from '@angular/core';
 import { provideMomentDateAdapter } from '@angular/material-moment-adapter';
-import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideRouter } from '@angular/router';
 import { provideStore } from '@ngrx/store';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
@@ -16,7 +15,6 @@ import { appRoutes } from './app.routes';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
-    provideAnimations(),
     provideHttpClient(),
     provideMomentDateAdapter(),
     provideRouter(appRoutes),

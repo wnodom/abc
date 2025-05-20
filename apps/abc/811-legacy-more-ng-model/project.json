@@ -115,7 +115,8 @@
           "buildTarget": "abc-811-legacy-more-ng-model:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

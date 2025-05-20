@@ -115,7 +115,8 @@
           "buildTarget": "abc-302-observables:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

@@ -115,7 +115,8 @@
           "buildTarget": "abc-808-legacy-promises:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
       This step is about Upgrading from AngularJS 1.x; there is no
       code here, see instruction presentation and discussion.
     </p>
-  `,
-  standalone: true
+  `
 })
 export class AppComponent {}

@@ -115,7 +115,8 @@
           "buildTarget": "abc-737-deferrable-views:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

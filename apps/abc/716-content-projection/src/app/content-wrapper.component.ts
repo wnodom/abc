@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
       <header>I wrap content</header>
       <ng-content></ng-content>
     </article>
-  `,
-  standalone: true
+  `
 })
 export class ContentWrapperComponent {}

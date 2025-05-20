@@ -13,7 +13,6 @@ import { Component } from '@angular/core';
       display: block;
       border: 3px solid var(--abc-border-color);
     }
-  `,
-  standalone: true
+  `
 })
 export class SecondComponent {}

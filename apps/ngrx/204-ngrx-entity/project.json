@@ -121,7 +121,8 @@
           "buildTarget": "ngrx-204-ngrx-entity:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

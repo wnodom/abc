@@ -118,7 +118,8 @@
           "buildTarget": "abc-818-legacy-constructor-based-injection:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

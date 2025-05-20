@@ -1,13 +1,15 @@
-import { Directive, HostBinding, Input } from '@angular/core';
+import { Directive, Input } from '@angular/core';
 
 @Directive({
   selector: '[appBorder]',
-  standalone: true
+  host: {
+    '[style.border]': 'getBorderColor()'
+  }
 })
 export class BorderDirective {
   @Input() color = 'var(--abc-border-color)';
 
-  @HostBinding('style.border') get borderColor() {
+  getBorderColor() {
     return `5px solid ${this.color}`;
   }
 }

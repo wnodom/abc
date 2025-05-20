@@ -115,7 +115,8 @@
           "buildTarget": "abc-814-legacy-ng-modules-routing:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

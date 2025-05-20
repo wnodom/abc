@@ -121,7 +121,8 @@
           "buildTarget": "abc-730-ngrx-feature-modules:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

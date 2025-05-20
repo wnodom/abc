@@ -8,8 +8,7 @@ const URLPREFIX = 'https://www.youtube-nocookie.com/embed/';
 @Component({
   selector: 'vst-video-container',
   templateUrl: './video-container.component.html',
-  styleUrl: './video-container.component.scss',
-  standalone: true
+  styleUrl: './video-container.component.scss'
 })
 export class VideoContainerComponent {
   private domSanitizer = inject(DomSanitizer);

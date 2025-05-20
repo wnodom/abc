@@ -115,7 +115,8 @@
           "buildTarget": "abc-402-smart-view-component-pattern:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

@@ -4,8 +4,7 @@ import { scheduleMap } from './app.constants';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  standalone: true
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
   name = 'John Doe';

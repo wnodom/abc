@@ -115,7 +115,8 @@
           "buildTarget": "abc-000-preparation-and-introduction:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

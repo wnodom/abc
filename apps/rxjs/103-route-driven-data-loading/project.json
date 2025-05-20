@@ -115,7 +115,8 @@
           "buildTarget": "rxjs-103-route-driven-data-loading:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

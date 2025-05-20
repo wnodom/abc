@@ -115,7 +115,8 @@
           "buildTarget": "abc-601-ngrx-store:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

@@ -115,7 +115,8 @@
           "buildTarget": "abc-502-query-parameters:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

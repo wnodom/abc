@@ -9,8 +9,7 @@ import {
 } from '@angular/core';
 
 @Directive({
-  selector: '[appWhenVisible]',
-  standalone: true
+  selector: '[appWhenVisible]'
 })
 export class WhenVisibleDirective implements OnInit, OnDestroy {
   private element = inject(ElementRef);

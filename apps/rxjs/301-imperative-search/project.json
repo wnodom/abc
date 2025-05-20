@@ -115,7 +115,8 @@
           "buildTarget": "rxjs-301-imperative-search:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

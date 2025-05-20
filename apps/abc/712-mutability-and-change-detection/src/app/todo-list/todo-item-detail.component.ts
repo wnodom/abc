@@ -2,7 +2,6 @@ import {
   ChangeDetectionStrategy,
   Component,
   EventEmitter,
-  HostListener,
   Input,
   Output
 } from '@angular/core';
@@ -10,16 +9,17 @@ import {
 import { Item } from '../item/item-types';
 
 @Component({
-  selector: 'app-item-detail',
+  selector: 'app-todo-item-detail',
   templateUrl: './todo-item-detail.component.html',
   changeDetection: ChangeDetectionStrategy.Default,
-  standalone: true
+  host: {
+    '(click)': 'onClick()'
+  }
 })
 export class TodoItemDetailComponent {
   @Input({ required: true }) item: Item | undefined;
   @Output() toggleItem = new EventEmitter<void>();
 
-  @HostListener('click')
   onClick() {
     this.toggleItem.emit();
   }

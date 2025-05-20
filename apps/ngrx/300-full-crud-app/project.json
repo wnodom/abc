@@ -121,7 +121,8 @@
           "buildTarget": "ngrx-300-full-crud-app:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

@@ -115,7 +115,8 @@
           "buildTarget": "abc-806-example-non-singleton-service:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

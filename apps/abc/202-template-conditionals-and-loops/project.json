@@ -115,7 +115,8 @@
           "buildTarget": "abc-202-template-conditionals-and-loops:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

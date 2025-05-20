@@ -115,7 +115,8 @@
           "buildTarget": "rxjs-402-testing:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

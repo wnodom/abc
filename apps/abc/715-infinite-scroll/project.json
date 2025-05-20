@@ -115,7 +115,8 @@
           "buildTarget": "abc-715-infinite-scroll:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

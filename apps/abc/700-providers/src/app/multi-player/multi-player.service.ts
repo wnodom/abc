@@ -9,7 +9,7 @@ export class MultiPlayerService implements ClickService {
   private socket = inject(Socket);
 
   readonly clickCount = this.socket
-    .fromEvent<number>('count')
+    .fromEvent<number, 'count'>('count')
     .pipe(shareReplay({ refCount: true, bufferSize: 1 }));
 
   constructor() {

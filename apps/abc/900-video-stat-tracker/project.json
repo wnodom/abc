@@ -115,7 +115,8 @@
           "buildTarget": "abc-900-video-stat-tracker:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

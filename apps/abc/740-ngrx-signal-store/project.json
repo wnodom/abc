@@ -122,7 +122,8 @@
           "buildTarget": "abc-740-ngrx-signal-store:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

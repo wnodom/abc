@@ -115,7 +115,8 @@
           "buildTarget": "abc-728-component-template-testing:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

@@ -9,7 +9,6 @@ import { Component } from '@angular/core';
         border: 3px solid var(--abc-category-1-color);
       }
     </style>
-  `,
-  standalone: true
+  `
 })
 export class FirstComponent {}

@@ -115,7 +115,8 @@
           "buildTarget": "abc-101-data-binding:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

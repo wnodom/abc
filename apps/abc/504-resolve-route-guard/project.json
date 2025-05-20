@@ -115,7 +115,8 @@
           "buildTarget": "abc-504-resolve-route-guard:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

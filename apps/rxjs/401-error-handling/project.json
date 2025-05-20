@@ -115,7 +115,8 @@
           "buildTarget": "rxjs-401-error-handling:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

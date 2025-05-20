@@ -115,7 +115,8 @@
           "buildTarget": "abc-731-form-array:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

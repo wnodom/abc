@@ -115,7 +115,8 @@
           "buildTarget": "abc-710-component-lifecycle:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

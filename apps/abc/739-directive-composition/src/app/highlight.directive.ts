@@ -1,13 +1,15 @@
-import { Directive, HostBinding, Input } from '@angular/core';
+import { Directive, Input } from '@angular/core';
 
 @Directive({
   selector: '[appHighlight]',
-  standalone: true
+  host: {
+    '[style.backgroundColor]': 'getBackgroundColor()'
+  }
 })
 export class HighlightDirective {
   @Input() color = 'var(--abc-highlight-color)';
 
-  @HostBinding('style.backgroundColor') get backgroundColor() {
+  getBackgroundColor() {
     return this.color;
   }
 }

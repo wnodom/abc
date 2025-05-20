@@ -7,8 +7,7 @@ import {
 
 @Component({
   selector: 'app-counter-display',
-  templateUrl: './counter-display.component.html',
-  standalone: true
+  templateUrl: './counter-display.component.html'
 })
 export class CounterDisplayComponent {
   @Input({ required: true }) label!: string;

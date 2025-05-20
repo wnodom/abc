@@ -115,7 +115,8 @@
           "buildTarget": "abc-501-route-parameters:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     }
   }
 }

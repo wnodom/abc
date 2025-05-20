@@ -4,8 +4,7 @@ import { Order } from '../api-types';
 
 @Component({
   selector: 'app-order-list',
-  templateUrl: './order-list.component.html',
-  standalone: true
+  templateUrl: './order-list.component.html'
 })
 export class OrderListComponent {
   // Defaults to property name = variable name.
