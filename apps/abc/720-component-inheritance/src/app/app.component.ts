@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 import { EmployeeGridComponent } from './employee-grid.component';
 import { EmployeeListComponent } from './employee-list.component';
 import { Employee } from './interfaces';
 
-const employees = [
+const employees: Employee[] = [
   {
     id: 1,
     firstName: 'Henry',
@@ -61,11 +61,11 @@ const employees = [
   imports: [EmployeeListComponent, EmployeeGridComponent]
 })
 export class AppComponent {
-  showList = true;
-  myEmployees: Employee[] = employees;
+  showList = signal(true);
+  myEmployees = signal(employees);
 
   toggleView() {
-    this.showList = !this.showList;
+    this.showList.update(s => !s);
   }
 
   logEmployee(employee: Employee) {

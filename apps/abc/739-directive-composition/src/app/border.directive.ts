@@ -1,4 +1,4 @@
-import { Directive, Input } from '@angular/core';
+import { Directive, model } from '@angular/core';
 
 @Directive({
   selector: '[appBorder]',
@@ -7,9 +7,9 @@ import { Directive, Input } from '@angular/core';
   }
 })
 export class BorderDirective {
-  @Input() color = 'var(--abc-border-color)';
+  readonly color = model('var(--abc-border-color)');
 
   getBorderColor() {
-    return `5px solid ${this.color}`;
+    return `5px solid ${this.color()}`;
   }
 }

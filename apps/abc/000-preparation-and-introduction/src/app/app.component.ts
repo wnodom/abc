@@ -1,14 +1,15 @@
-import { AsyncPipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 import { ColorSchemeObserver } from '@class-materials/shared/util-color-scheme-observer';
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  styleUrl: 'app.component.scss',
-  imports: [AsyncPipe]
+  styleUrl: 'app.component.scss'
 })
 export class AppComponent {
-  readonly colorScheme$ = inject(ColorSchemeObserver).observe();
+  readonly colorScheme = toSignal(
+    inject(ColorSchemeObserver).observe()
+  );
 }

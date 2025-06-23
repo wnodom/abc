@@ -1,5 +1,7 @@
+/* eslint-disable @angular-eslint/prefer-inject */
+
 import { AsyncPipe } from '@angular/common';
-import { Component, Input, Optional } from '@angular/core';
+import { Component, Optional, effect, input } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Observable, of } from 'rxjs';
 
@@ -18,11 +20,7 @@ import { ConstellationLoader } from './constellation-loader.service';
     '../constellation-viewer-shared-template.component.html'
 })
 export default class ConstellationViewerComponent {
-  @Input() set id(iauAbbreviation: string) {
-    if (iauAbbreviation) {
-      this.selectConstellation(iauAbbreviation);
-    }
-  }
+  readonly id = input<string | undefined>();
 
   readonly constellations$;
   selectedConstellation$: Observable<Constellation | null> = of(null);
@@ -39,6 +37,15 @@ export default class ConstellationViewerComponent {
 
     this.constellations$ =
       this.constellationLoader.getConstellations();
+
+    // When the constellation ID changes, load the corresponding
+    // constellation.
+    effect(() => {
+      const iauAbbreviation = this.id();
+      if (iauAbbreviation) {
+        this.selectConstellation(iauAbbreviation);
+      }
+    });
   }
 
   selectConstellation(iauAbbreviation: string) {

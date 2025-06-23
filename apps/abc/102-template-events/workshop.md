@@ -1,12 +1,8 @@
-# Workshop for this step
+# Workshop
 
-Goals:
+Catch one or more events triggered by user input. You can see a list of
+available events here:
 
-* Get comfortable catching events from elements.
+<https://developer.mozilla.org/en-US/docs/Web/API/Element>
 
------
-
-1. Catch one or more events triggered by user input. You can see a list
-   of available events here:
-   <https://developer.mozilla.org/en-US/docs/Web/API/Element>
-    > Event list is on the left hand navigation bar under "Events"
+The event list is in the left-hand navigation panel under "Events."

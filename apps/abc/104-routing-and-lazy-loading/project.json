@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/104-routing-and-lazy-loading/src/index.html",
         "browser": "apps/abc/104-routing-and-lazy-loading/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/104-routing-and-lazy-loading/tsconfig.app.json",
         "assets": [
           "apps/abc/104-routing-and-lazy-loading/src/favicon.ico",

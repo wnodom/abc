@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/207-input-data-bindings/src/index.html",
         "browser": "apps/abc/207-input-data-bindings/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/207-input-data-bindings/tsconfig.app.json",
         "assets": [
           "apps/abc/207-input-data-bindings/src/favicon.ico",

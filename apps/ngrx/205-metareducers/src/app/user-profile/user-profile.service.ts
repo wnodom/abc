@@ -4,10 +4,11 @@ import { map, Observable, of } from 'rxjs';
 
 import { UserProfile } from './user-profile.types';
 
-const apiUrl = '/api';
+// Local API server
+// const apiUrl = '/api';
 
-// Or connect to the hosted demo API (works from StackBlitz):
-// const apiUrl = 'https://api.angularbootcamp.com';
+// Hosted API server
+const apiUrl = 'https://api.angularbootcamp.com';
 
 @Injectable({ providedIn: 'root' })
 export class UserProfileService {

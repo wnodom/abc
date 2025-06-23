@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/208-output-event-bindings/src/index.html",
         "browser": "apps/abc/208-output-event-bindings/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/208-output-event-bindings/tsconfig.app.json",
         "assets": [
           "apps/abc/208-output-event-bindings/src/favicon.ico",

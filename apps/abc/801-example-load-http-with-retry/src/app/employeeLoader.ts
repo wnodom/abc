@@ -4,7 +4,11 @@ import { Observable, map } from 'rxjs';
 
 import { Employee } from './employee';
 
-const apiUrl = '/api';
+// Local API server
+// const apiUrl = '/api';
+
+// Hosted API server
+const apiUrl = 'https://api.angularbootcamp.com';
 
 @Injectable({
   providedIn: 'root'

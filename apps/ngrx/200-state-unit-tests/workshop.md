@@ -1,4 +1,4 @@
-# Workshop for this step
+# Workshop
 
 There's full testing in place for the NgRx implementation of 
 Articles, and you will add testing for Authors. Use `mock.authors.

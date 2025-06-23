@@ -3,7 +3,7 @@
 
   <form [formGroup]="dynamicFormGroup" (ngSubmit)="onSubmit()">
     <!-- Show each field defined in the schema. -->
-    @for (fieldinfo of schema; track fieldinfo.fieldName) {
+    @for (fieldinfo of schema(); track fieldinfo.fieldName) {
       <div>
         <label [for]="fieldinfo.fieldName">
           {{ fieldinfo.fieldLabel }}

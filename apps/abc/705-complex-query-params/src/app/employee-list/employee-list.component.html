@@ -6,7 +6,7 @@
           <app-employee-list-header
             [propertyName]="header.propertyName"
             [display]="header.display"
-            [options]="options"
+            [options]="options()"
             (clicked)="headerClicked($event)"
           />
         </td>
@@ -14,7 +14,7 @@
     </tr>
   </thead>
   <tbody>
-    @for (employee of employees; track employee.id) {
+    @for (employee of employees(); track employee.id) {
       <tr>
         <td>
           <a

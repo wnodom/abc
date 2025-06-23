@@ -54,10 +54,10 @@ Angular Internationalization (i18n)
 [link](https://angular.dev/guide/i18n)
 
 Angular Material
-[link](https://material.angular.io)
+[link](https://material.angular.dev)
 
 Angular Component Development Kit (CDK)
-[link](https://material.angular.io/cdk)
+[link](https://material.angular.dev/cdk)
 
 
 Baseline

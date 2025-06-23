@@ -14,6 +14,12 @@ import { firstValueFrom } from 'rxjs';
 import { Employee } from './employee';
 import { EmployeeService } from './employee.service';
 
+// Local API server
+// const apiUrl = '/api';
+
+// Hosted API server
+const apiUrl = 'https://api.angularbootcamp.com';
+
 describe('Employee Service', () => {
   let httpTestingController: HttpTestingController;
   let service: EmployeeService;
@@ -59,7 +65,7 @@ describe('Employee Service', () => {
         expect(list).toEqual(['Bob', 'Joe', 'Sara']);
       });
       const req = httpTestingController.expectOne(
-        '/api/employees?q=foo&_limit=20'
+        apiUrl + '/employees?q=foo&_limit=20'
       );
       expect(req.request.method).toEqual('GET');
       expect(req.request.body).toBeNull();
@@ -79,7 +85,7 @@ describe('Employee Service', () => {
       });
 
       const req = httpTestingController.expectOne(
-        '/api/employees?q=foo&_limit=20'
+        apiUrl + '/employees?q=foo&_limit=20'
       );
 
       expect(req.request.method).toEqual('GET');
@@ -97,7 +103,7 @@ describe('Employee Service', () => {
       const result = firstValueFrom(service.getFilteredList('foo'));
 
       const req = httpTestingController.expectOne(
-        '/api/employees?q=foo&_limit=20'
+        apiUrl + '/employees?q=foo&_limit=20'
       );
       req.flush(mockEmployees);
       // need to flush _before_ the await
@@ -124,7 +130,9 @@ describe('Employee Service', () => {
         expect(list).toEqual(['Bob', 'Joe', 'foo']);
       });
 
-      const req = httpTestingController.expectOne('/api/employees');
+      const req = httpTestingController.expectOne(
+        apiUrl + '/employees'
+      );
 
       expect(req.request.method).toEqual('GET');
 
@@ -143,7 +151,9 @@ describe('Employee Service', () => {
         expect(list).toEqual(['Bob', 'Joe', 'Sara']);
       });
 
-      const req = httpTestingController.expectOne('/api/employees');
+      const req = httpTestingController.expectOne(
+        apiUrl + '/employees'
+      );
 
       expect(req.request.method).toEqual('GET');
 
@@ -159,7 +169,9 @@ describe('Employee Service', () => {
         expect(list).toEqual(['Bob', 'Joe', 'Sara']);
       });
 
-      const req = httpTestingController.expectOne('/api/employees');
+      const req = httpTestingController.expectOne(
+        apiUrl + '/employees'
+      );
 
       expect(req.request.method).toEqual('GET');
 
@@ -173,7 +185,9 @@ describe('Employee Service', () => {
       console.time('using promises');
       const result = firstValueFrom(service.getDelayedList());
 
-      const req = httpTestingController.expectOne('/api/employees');
+      const req = httpTestingController.expectOne(
+        apiUrl + '/employees'
+      );
       req.flush(mockEmployees);
       // need to flush _before_ the await
       expect(await result).toEqual(['Bob', 'Joe', 'Sara']);
@@ -188,7 +202,9 @@ describe('Employee Service', () => {
       console.time('using promises and fakeAsync');
       const result = firstValueFrom(service.getDelayedList());
 
-      const req = httpTestingController.expectOne('/api/employees');
+      const req = httpTestingController.expectOne(
+        apiUrl + '/employees'
+      );
       req.flush(mockEmployees);
       tick(2000);
       // need to flush _before_ the await

@@ -1,7 +1,7 @@
 import {
   ApplicationConfig,
   importProvidersFrom,
-  provideZoneChangeDetection
+  provideZonelessChangeDetection
 } from '@angular/core';
 import { SocketIoConfig, SocketIoModule } from 'ngx-socket-io';
 
@@ -12,7 +12,7 @@ const config: SocketIoConfig = {
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideZonelessChangeDetection(),
     importProvidersFrom(SocketIoModule.forRoot(config))
   ]
 };

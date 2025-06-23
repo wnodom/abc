@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/735-signals-effect/src/index.html",
         "browser": "apps/abc/735-signals-effect/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/735-signals-effect/tsconfig.app.json",
         "assets": [
           "apps/abc/735-signals-effect/src/favicon.ico",

@@ -1,21 +1,33 @@
-import { Directive, Input, OnDestroy, OnInit } from '@angular/core';
+import {
+  Directive,
+  OnDestroy,
+  OnInit,
+  effect,
+  input,
+  numberAttribute,
+  signal
+} from '@angular/core';
 import { Subscription, interval, map } from 'rxjs';
 
 @Directive({
   selector: '[appBlink]',
   host: {
-    '[style.visibility]': 'viz'
+    '[style.visibility]': 'viz()'
   }
 })
 export class BlinkDirective implements OnDestroy, OnInit {
-  viz = 'visible';
-  // Note that this input is not required
-  @Input() set speed(rawSpeed: number | string) {
-    this.stop();
-    this.start(Number(rawSpeed) || 500);
-  }
+  viz = signal('visible');
+
+  readonly speed = input(500, { transform: numberAttribute });
 
   private intervalSubscription: Subscription | undefined;
+
+  constructor() {
+    effect(() => {
+      this.stop();
+      this.start(this.speed());
+    });
+  }
 
   ngOnInit() {
     if (!this.intervalSubscription) {
@@ -26,9 +38,9 @@ export class BlinkDirective implements OnDestroy, OnInit {
   start(ms: number) {
     this.intervalSubscription = interval(ms)
       .pipe(
-        map(() => (this.viz === 'visible' ? 'hidden' : 'visible'))
+        map(() => (this.viz() === 'visible' ? 'hidden' : 'visible'))
       )
-      .subscribe(visibility => (this.viz = visibility));
+      .subscribe(visibility => this.viz.set(visibility));
   }
 
   stop() {

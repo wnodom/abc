@@ -1,5 +1,5 @@
 import { JsonPipe } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 
 import { exampleSchema } from './example-schema';
@@ -13,10 +13,10 @@ import { SchemaFormUtils } from './schema-form-utils';
 })
 export class AppComponent {
   // This could be loaded from an external source.
-  schema = exampleSchema;
+  schema = signal(exampleSchema);
 
   dynamicFormGroup = inject(FormBuilder).group(
-    SchemaFormUtils.createControlsConfigFromSchema(this.schema)
+    SchemaFormUtils.createControlsConfigFromSchema(this.schema())
   );
 
   // Make it easier to get to the form controls from the template.

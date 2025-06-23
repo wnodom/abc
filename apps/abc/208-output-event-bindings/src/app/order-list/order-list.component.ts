@@ -1,9 +1,4 @@
-import {
-  Component,
-  EventEmitter,
-  Input,
-  Output
-} from '@angular/core';
+import { Component, output, input } from '@angular/core';
 
 import { Order } from '../api-types';
 
@@ -12,9 +7,9 @@ import { Order } from '../api-types';
   templateUrl: './order-list.component.html'
 })
 export class OrderListComponent {
-  @Input({ required: true }) orders!: Order[];
+  readonly orders = input.required<Order[]>();
 
-  @Output() selectOrder = new EventEmitter<Order>();
+  readonly selectOrder = output<Order>();
 
   // -------- external API above, internal implementation below
 

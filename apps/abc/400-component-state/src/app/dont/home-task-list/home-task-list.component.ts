@@ -1,9 +1,4 @@
-import {
-  Component,
-  EventEmitter,
-  Input,
-  Output
-} from '@angular/core';
+import { Component, output, input } from '@angular/core';
 
 import { TodoListComponent } from '../../todo-list/todo-list.component';
 import { Task, TaskToggle } from '../../types';
@@ -19,9 +14,9 @@ import { Task, TaskToggle } from '../../types';
   imports: [TodoListComponent]
 })
 export class HomeTaskListComponent {
-  @Input({ required: true }) done!: Task[];
-  @Input({ required: true }) todo!: Task[];
-  @Output() toggleTask = new EventEmitter<TaskToggle>();
+  readonly done = input.required<Task[]>();
+  readonly todo = input.required<Task[]>();
+  readonly toggleTask = output<TaskToggle>();
 
   checkbox = 'check_box';
   outline = 'check_box_outline_blank';

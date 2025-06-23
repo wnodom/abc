@@ -3,7 +3,7 @@ import {
   ApplicationConfig,
   provideZoneChangeDetection
 } from '@angular/core';
-import { provideRouter, withHashLocation } from '@angular/router';
+import { provideRouter } from '@angular/router';
 import {
   DefaultDataServiceConfig,
   HttpUrlGenerator,
@@ -28,7 +28,7 @@ export const appConfig: ApplicationConfig = {
     provideEffects(), // not needed in previous steps, but needed here
     provideEntityData(entityConfig, withEffects()),
     provideHttpClient(),
-    provideRouter(appRoutes, withHashLocation()),
+    provideRouter(appRoutes),
     provideStore(reducers, { metaReducers }),
     provideRouterStore(),
     provideStoreDevtools({

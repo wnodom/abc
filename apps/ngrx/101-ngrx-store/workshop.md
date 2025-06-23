@@ -1,4 +1,4 @@
-# Workshop for this step
+# Workshop
 
 At this point, we have learned how to put global state into the store,
 but we don't know how to do this for state in a lazily-loaded feature.
@@ -26,13 +26,13 @@ to the ngrx100 demo app.
    you were doing this on a new app, you would have to add the
    appropriate ngrx dependencies. The easiest way is this CLI
    schematic (within the `apps/ngrx/100-workshop` directory):
-   `ng add @ngrx/store --minimal false`. In addition to setting up the
+   `npx ng add @ngrx/store --minimal false`. In addition to setting up the
    dependencies, this updates `main.ts` and creates the initial
    files.
 2. We have dev-tools already installed in the abc.zip file, but you
    would need to add it separately to a new app in order to use the
    [Redux Dev Tools][devtools] Chrome extension:
-   `ng add @ngrx/store-devtools`.
+   `npx ng add @ngrx/store-devtools`.
 
 [devtools]:
 https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en

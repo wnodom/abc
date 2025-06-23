@@ -6,7 +6,12 @@ export enum cardTypes {
 }
 export const cardTypesList = Object.values(cardTypes);
 
-const apiUrl = '/api';
+// Local API server
+// const apiUrl = '/api';
+
+// Hosted API server
+const apiUrl = 'https://api.angularbootcamp.com';
+
 export const playerEndpointLocation = apiUrl + '/soccer/players';
 export const gameEndpointLocation = apiUrl + '/soccer/games';
 export const goalEndpointLocation = apiUrl + '/soccer/shotsongoal';

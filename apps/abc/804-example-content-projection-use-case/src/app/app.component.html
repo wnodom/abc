@@ -3,7 +3,7 @@
     New Announcements
   </app-collection-panel-header>
   <app-collection-panel-content>
-    @for (item of announcements; track item) {
+    @for (item of announcements(); track item) {
       <app-announcement-card>
         <app-announcement-title>
           {{ item.title }}

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 import { Item } from '../api-types';
 
@@ -7,5 +7,5 @@ import { Item } from '../api-types';
   templateUrl: './order-items.component.html'
 })
 export class OrderItemsComponent {
-  @Input({ required: true }) items!: Item[];
+  readonly items = input.required<Item[]>();
 }

@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/720-component-inheritance/src/index.html",
         "browser": "apps/abc/720-component-inheritance/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/720-component-inheritance/tsconfig.app.json",
         "assets": [
           "apps/abc/720-component-inheritance/src/favicon.ico",

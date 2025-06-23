@@ -1,4 +1,4 @@
-import { Component, Input, inject } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import {
   FormArray,
   FormControl,
@@ -15,19 +15,18 @@ import {
 export class FormToppingsComponent {
   private fb = inject(NonNullableFormBuilder);
 
-  @Input({ required: true }) toppings!: FormArray<
-    FormControl<string>
-  >;
+  readonly toppings =
+    input.required<FormArray<FormControl<string>>>();
 
   get toppingControls() {
-    return (this.toppings.controls ?? []) as FormControl[];
+    return (this.toppings().controls ?? []) as FormControl[];
   }
 
   addNewTopping() {
-    this.toppings.push(this.fb.control(''));
+    this.toppings().push(this.fb.control(''));
   }
 
   removeTopping(toppingIndex: number) {
-    this.toppings.removeAt(toppingIndex);
+    this.toppings().removeAt(toppingIndex);
   }
 }

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
@@ -7,7 +7,7 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
   imports: [ReactiveFormsModule]
 })
 export class FormSelectComponent {
-  @Input({ required: true }) control!: FormControl<any>;
-  @Input({ required: true }) label!: string;
-  @Input({ required: true }) options!: string[];
+  readonly control = input.required<FormControl<any>>();
+  readonly label = input.required<string>();
+  readonly options = input.required<string[]>();
 }

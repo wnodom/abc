@@ -1,5 +1,5 @@
 import { AsyncPipe, JsonPipe } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { shareReplay } from 'rxjs';
 
 import { CompanyLoader } from './company-loader.service';
@@ -14,5 +14,5 @@ export class AppComponent {
     .loadOneCompany()
     .pipe(shareReplay(1));
 
-  showAgain = false;
+  showAgain = signal(false);
 }

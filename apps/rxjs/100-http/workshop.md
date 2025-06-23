@@ -1,4 +1,4 @@
-# Workshop for this step
+# Workshop
 
 The instructor may have changes to the workshops, as our curriculum is
 under continuous improvement and is adjusted for the needs of each

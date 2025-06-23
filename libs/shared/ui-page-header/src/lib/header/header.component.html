@@ -8,17 +8,21 @@
           alt="Oasis Digital Logo"
         />
       </a>
-      <h1>{{ title }}</h1>
+      <h1>
+        {{ title() }}
+      </h1>
       <div class="toolbar-spacer"></div>
-      <div *ngFor="let document of documents">
-        <a
-          class="document-button"
-          mat-flat-button
-          href="{{ document.url }}"
-        >
-          {{ document.label }}
-        </a>
-      </div>
+      @for (document of documents(); track document) {
+        <div>
+          <a
+            class="document-button"
+            mat-flat-button
+            href="{{ document.url }}"
+          >
+            {{ document.label }}
+          </a>
+        </div>
+      }
     </mat-toolbar-row>
   </ng-container>
   <ng-content></ng-content>

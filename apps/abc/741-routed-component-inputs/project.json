@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/741-routed-component-inputs/src/index.html",
         "browser": "apps/abc/741-routed-component-inputs/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/741-routed-component-inputs/tsconfig.app.json",
         "assets": [
           "apps/abc/741-routed-component-inputs/src/favicon.ico",

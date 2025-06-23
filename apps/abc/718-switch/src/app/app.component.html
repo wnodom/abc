@@ -1,12 +1,12 @@
 <article>
   <button (click)="increment()">Add One</button>
-  {{ n }}
+  {{ n() }}
 </article>
 
 <article>
   <header>Switch on values</header>
   <div>
-    @switch (n > 5) {
+    @switch (n() > 5) {
       @case (false) {
         <span>Seen a little</span>
       }
@@ -20,7 +20,7 @@
 <article>
   <header>Switch on predicates</header>
   <div>
-    @switch (n) {
+    @switch (n()) {
       @case (0) {
         <div>Seen zero</div>
       }
@@ -31,13 +31,13 @@
         <div>2...4</div>
       }
       @default {
-        <div>Seen {{ n }} times</div>
+        <div>Seen {{ n() }} times</div>
       }
     }
   </div>
 
   <div>
-    @switch (food) {
+    @switch (food()) {
       @case ('apple') {
         <span>Shiny Apple</span>
       }

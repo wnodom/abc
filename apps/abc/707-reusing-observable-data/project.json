@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/707-reusing-observable-data/src/index.html",
         "browser": "apps/abc/707-reusing-observable-data/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/707-reusing-observable-data/tsconfig.app.json",
         "assets": [
           "apps/abc/707-reusing-observable-data/src/favicon.ico",

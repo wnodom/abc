@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 import { Order, fakeApiOrders } from '../api-types';
 import { OrderDetailsComponent } from '../order-details/order-details.component';
@@ -10,10 +10,10 @@ import { OrderListComponent } from '../order-list/order-list.component';
   imports: [OrderListComponent, OrderDetailsComponent]
 })
 export class OrderManagerComponent {
-  orderList = fakeApiOrders;
-  selectedOrder: Order | undefined;
+  orderList = signal(fakeApiOrders);
+  selectedOrder = signal<Order | undefined>(undefined);
 
   setOrder(order: Order) {
-    this.selectedOrder = order;
+    this.selectedOrder.set(order);
   }
 }

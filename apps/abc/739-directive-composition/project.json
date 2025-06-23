@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/739-directive-composition/src/index.html",
         "browser": "apps/abc/739-directive-composition/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/739-directive-composition/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [

@@ -7,9 +7,9 @@ import { Order } from '../api-types';
   templateUrl: './order-list.component.html'
 })
 export class OrderListComponent {
-  orders = input.required<Order[]>();
+  readonly orders = input.required<Order[]>();
 
-  selectOrder = output<Order>();
+  readonly selectOrder = output<Order>();
 
   // -------- external API above, internal implementation below
 

@@ -1,4 +1,4 @@
-# Workshop for this step
+# Workshop
 
 * Make a new component
 * Add a lazy-loaded route to the new component

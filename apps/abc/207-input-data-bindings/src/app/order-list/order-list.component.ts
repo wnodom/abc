@@ -1,4 +1,4 @@
-import { Component, Input, numberAttribute } from '@angular/core';
+import { Component, numberAttribute, input } from '@angular/core';
 
 import { Order } from '../api-types';
 
@@ -7,12 +7,13 @@ import { Order } from '../api-types';
   templateUrl: './order-list.component.html'
 })
 export class OrderListComponent {
-  // Defaults to property name = variable name.
-  // Can override with @Input('name') or @Input({alias: 'name'}).
-  @Input({ required: true }) orders!: Order[];
+  // Defaults to property name = variable name, but can be
+  // aliased with input({alias: 'name'}).
+  readonly orders = input.required<Order[]>();
 
   // This could be derived from orders, but we want to show the
   // transform.
-  @Input({ required: true, transform: numberAttribute })
-  count!: number;
+  readonly count = input.required<number, unknown>({
+    transform: numberAttribute
+  });
 }

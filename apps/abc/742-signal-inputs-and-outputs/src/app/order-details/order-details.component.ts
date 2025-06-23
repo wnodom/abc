@@ -10,7 +10,7 @@ import { OrderItemsComponent } from '../order-items/order-items.component';
   imports: [OrderHeaderComponent, OrderItemsComponent]
 })
 export class OrderDetailsComponent {
-  sod = input.required<Order | undefined>({
+  readonly sod = input.required<Order | undefined>({
     // eslint-disable-next-line @angular-eslint/no-input-rename
     alias: 'selectedOrderDetails'
   });

@@ -1,9 +1,8 @@
 import {
   Component,
-  EventEmitter,
-  Input,
+  input,
   numberAttribute,
-  Output
+  output
 } from '@angular/core';
 
 @Component({
@@ -12,7 +11,7 @@ import {
     <p>
       <strong>
         Your score is:
-        <span class="value-display">{{ value }}</span>
+        <span class="value-display">{{ value() }}</span>
         !
       </strong>
     </p>
@@ -22,11 +21,12 @@ import {
   `
 })
 export class ScoreComponent {
-  @Input({ required: true, transform: numberAttribute })
-  value!: number;
-  @Output() notify = new EventEmitter<string>();
+  readonly value = input.required<number, unknown>({
+    transform: numberAttribute
+  });
+  readonly notify = output<string>();
 
   onNotify() {
-    this.notify.emit('Your score was ' + this.value);
+    this.notify.emit('Your score was ' + this.value());
   }
 }

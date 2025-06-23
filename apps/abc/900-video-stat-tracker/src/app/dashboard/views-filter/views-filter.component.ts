@@ -1,9 +1,5 @@
 import { Component, inject } from '@angular/core';
-import {
-  FormControl,
-  FormGroup,
-  ReactiveFormsModule
-} from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { DashboardService } from '../dashboard.service';
 
@@ -17,13 +13,5 @@ import { DashboardService } from '../dashboard.service';
   imports: [ReactiveFormsModule]
 })
 export class ViewsFilterComponent {
-  filterFormGroup: FormGroup<{
-    region: FormControl<string>;
-    dateTo: FormControl<string>;
-    dateFrom: FormControl<string>;
-    minor: FormControl<boolean>;
-    adults: FormControl<boolean>;
-    middleAged: FormControl<boolean>;
-    retired: FormControl<boolean>;
-  }> = inject(DashboardService).filterForm;
+  filterFormGroup = inject(DashboardService).filterForm;
 }

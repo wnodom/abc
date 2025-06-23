@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/501-route-parameters/src/index.html",
         "browser": "apps/abc/501-route-parameters/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/501-route-parameters/tsconfig.app.json",
         "assets": [
           "apps/abc/501-route-parameters/src/favicon.ico",

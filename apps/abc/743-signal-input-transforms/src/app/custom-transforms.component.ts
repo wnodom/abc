@@ -9,12 +9,12 @@ import { Component, input } from '@angular/core';
   `
 })
 export class CustomTransformsComponent {
-  upperStringInline = input.required({
+  readonly upperStringInline = input.required({
     // transforms can be inline pure functions
     transform: (value: string) => value.toLocaleUpperCase()
   });
 
-  lowerString = input.required({ transform: toLower });
+  readonly lowerString = input.required({ transform: toLower });
 }
 
 // transforms can be named pure functions

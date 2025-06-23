@@ -1,9 +1,9 @@
-# Workshop for this step
+# Workshop
 
 * Create a service that uses `HttpClient` to load video data from the API:
 
 ```
-ng generate service videoData
+npx ng generate service videoData
 ```
 
 * Inject the service into the DashboardComponent and use it to load the

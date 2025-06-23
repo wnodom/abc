@@ -3,7 +3,7 @@
 <button (click)="addOne()">Add another car</button>
 
 <div class="car-orders">
-  @for (c of cars; track c.id) {
+  @for (c of cars(); track c.id) {
     <app-car-order />
   }
 </div>

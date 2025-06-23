@@ -6,7 +6,7 @@ import {
   CurrencyPipe,
   DatePipe
 } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 // prettier-ignore
 const recordList = [
@@ -36,5 +36,5 @@ export class AppComponent {
   reportDate = new Date('Dec 25, 2058');
   expirationDate = new Date('Jan 01, 2059');
   records = recordList;
-  showJSON = false;
+  showJSON = signal(false);
 }

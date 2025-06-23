@@ -1,3 +1,3 @@
-# Workshop for this step
+# Workshop
 
-* Highlight a video when the user clicks (selects) it.
+Highlight a video when the user clicks (selects) it.

@@ -1,4 +1,4 @@
-# Workshop for this step
+# Workshop
 
 The route is the ultimate source of information for the current 
 author and the selected article. Before this step, we were 
@@ -22,6 +22,6 @@ between the router and NgRx.
 ## Notes
 
 1. The dependencies are already installed, and `main.ts` already 
-   knows about `RouterStore`, because we ran `ng add 
-   @ngrx/router-store --project ngrx202-router-store` in the root 
-   directory to set up articles routing.
+   knows about `RouterStore`, because we ran
+   `npx ng add @ngrx/router-store --project ngrx202-router-store`
+   in the root directory to set up articles routing.

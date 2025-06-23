@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/715-infinite-scroll/src/index.html",
         "browser": "apps/abc/715-infinite-scroll/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/715-infinite-scroll/tsconfig.app.json",
         "assets": [
           "apps/abc/715-infinite-scroll/src/favicon.ico",

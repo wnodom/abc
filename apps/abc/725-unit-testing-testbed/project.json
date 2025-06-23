@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/725-unit-testing-testbed/src/index.html",
         "browser": "apps/abc/725-unit-testing-testbed/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/725-unit-testing-testbed/tsconfig.app.json",
         "assets": [
           "apps/abc/725-unit-testing-testbed/src/favicon.ico",

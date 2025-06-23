@@ -1,4 +1,4 @@
-# Workshop for this step
+# Workshop
 
 In this step, we've seen what a basic use of @ngrx/store looks like
 for articles. We will add the same for authors. We will need to add

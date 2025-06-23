@@ -1,16 +1,17 @@
 <nav>
-  <ul>
-    @for (trigger of triggers; track trigger) {
-      <li [class.active-link]="trigger === currentTab">
-        <a (click)="currentTab = trigger">{{ trigger }}</a>
-      </li>
-    }
-  </ul>
+  @for (trigger of triggers; track trigger) {
+    <button
+      (click)="currentTab.set(trigger)"
+      [class.active-link]="trigger === currentTab()"
+    >
+      {{ trigger }}
+    </button>
+  }
 </nav>
 
 <article>
-  @switch (currentTab) {
-    @case (Trigger.idle) {
+  @switch (currentTab()) {
+    @case ('Idle') {
       <header>
         <p>
           <em>Idle</em>
@@ -31,10 +32,10 @@
         <app-idle />
         <app-non-standalone />
       } @placeholder (minimum 2s) {
-        <p>This placeholder will go away after 2s</p>
+        <p>This placeholder will go away after 2 seconds</p>
       }
     }
-    @case (Trigger.viewport) {
+    @case ('Viewport') {
       <header>
         <p>
           <em>Viewport</em>
@@ -44,21 +45,24 @@
         </p>
       </header>
       <ul class="collection list">
-        @for (extra of viewportExtras; track $index) {
-          <li>
-            {{ extra }}
-          </li>
-        }
+        <li>Scroll down to see the deferred component</li>
+        <li>Scroll down to see the deferred component</li>
+        <li>Keep scrolling</li>
+        <li>Scroll down to see the deferred component</li>
+        <li>Scroll down to see the deferred component</li>
+        <li>Almost there</li>
+        <li>Scroll down to see the deferred component</li>
+        <li>Scroll down to see the deferred component</li>
         <li>
           @defer (on viewport) {
             <app-viewport />
           } @placeholder (minimum 2s) {
-            <p>This placeholder will go away after 2s</p>
+            <p>This placeholder will go away after 2 seconds</p>
           }
         </li>
       </ul>
     }
-    @case (Trigger.interaction) {
+    @case ('Interaction') {
       <header>
         <p>
           <em>Interaction</em>
@@ -85,10 +89,10 @@
           work)
         </p>
       } @loading (after 100ms; minimum 2s) {
-        <p>This shows for 2s while loading</p>
+        <p>This shows for 2 seconds while loading</p>
       }
     }
-    @case (Trigger.hover) {
+    @case ('Hover') {
       <header>
         <p>
           <em>Hover</em>
@@ -116,7 +120,7 @@
         </p>
       }
     }
-    @case (Trigger.immediate) {
+    @case ('Immediate') {
       <header>
         <p>
           <em>Immediate</em>
@@ -131,7 +135,7 @@
         <p>This placeholder will flash very quickly</p>
       }
     }
-    @case (Trigger.timer) {
+    @case ('Timer') {
       <header>
         <p>
           <em>Timer</em>
@@ -142,12 +146,12 @@
       @defer (on timer(3s)) {
         <app-timer />
       } @placeholder {
-        <p>Loading will start on its own in 3s</p>
+        <p>Loading will start on its own in 3 seconds</p>
       } @loading (minimum 2s) {
-        <p>This shows for 2s while loading</p>
+        <p>This shows for 2 seconds while loading</p>
       }
     }
-    @case (Trigger.when) {
+    @case ('When') {
       <header>
         <p>
           <em>When</em>
@@ -164,10 +168,10 @@
       } @placeholder {
         <p>Loading will start when the value is above 3</p>
       } @loading (minimum 2s) {
-        <p>This shows for 2s while loading</p>
+        <p>This shows for 2 seconds while loading</p>
       }
     }
-    @case (Trigger.multiple) {
+    @case ('Multiple') {
       <header>
         <p>
           When there are multiple triggers, they work as OR; loading
@@ -191,10 +195,10 @@
           hover over this text.
         </p>
       } @loading (minimum 2s) {
-        <p>This shows for 2s while loading</p>
+        <p>This shows for 2 seconds while loading</p>
       }
     }
-    @case (Trigger.prefetched) {
+    @case ('Prefetched') {
       <header>
         <p>
           Prefetching allows you to start loading the component before

@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/503-route-guards/src/index.html",
         "browser": "apps/abc/503-route-guards/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/503-route-guards/tsconfig.app.json",
         "assets": [
           "apps/abc/503-route-guards/src/favicon.ico",

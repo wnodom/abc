@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 
 const meetings = [
   {
@@ -23,12 +23,24 @@ const todoList = [
   templateUrl: './user-dashboard.component.html'
 })
 export default class UserDashboardComponent {
-  showProfile = true;
+  showProfile = signal(true);
   nextMeetings = meetings;
-  todos = todoList;
+  todos = signal(todoList);
+  showHideProfileMessage = computed(
+    () => `${this.showProfile() ? 'Hide' : 'Show'} Profile`
+  );
 
   addTodo() {
-    // Add a new item at the beginning of the todo list.
-    this.todos.unshift({ label: `Task ${this.todos.length + 1}` });
+    // set is the basic
+    this.todos.set([
+      { label: `Task ${this.todos().length + 1}` },
+      ...this.todos()
+    ]);
+
+    // update is somewhat more advanced
+    // this.todos.update(value => [
+    //   { label: `Task ${value.length + 1}` },
+    //   ...value
+    // ]);
   }
 }

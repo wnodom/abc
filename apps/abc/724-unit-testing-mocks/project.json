@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/724-unit-testing-mocks/src/index.html",
         "browser": "apps/abc/724-unit-testing-mocks/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/724-unit-testing-mocks/tsconfig.app.json",
         "assets": [
           "apps/abc/724-unit-testing-mocks/src/favicon.ico",

@@ -1,10 +1,10 @@
-# Workshop for this step
+# Workshop
 
 In this step, we replace our @ngrx/entity implementations with
 @ngrx/data for authors and articles.
 
 1. Install the dependencies and set up the boilerplate with
-`ng add @ngrx/data`.
+`npx ng add @ngrx/data`.
 2. Data will use `api/author` or `api/authors` depending on the endpoint.
    Our server accepts only `/api/authors`. Copy the
    `PluralHttpUrlGenerator` from this step into your app, along with

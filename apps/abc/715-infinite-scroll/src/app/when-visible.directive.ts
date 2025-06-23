@@ -1,11 +1,10 @@
 import {
   Directive,
   ElementRef,
-  EventEmitter,
   OnDestroy,
   OnInit,
-  Output,
-  inject
+  inject,
+  output
 } from '@angular/core';
 
 @Directive({
@@ -14,7 +13,7 @@ import {
 export class WhenVisibleDirective implements OnInit, OnDestroy {
   private element = inject(ElementRef);
 
-  @Output() appWhenVisible = new EventEmitter();
+  readonly appWhenVisible = output<void>();
 
   private observer: IntersectionObserver | undefined;
 

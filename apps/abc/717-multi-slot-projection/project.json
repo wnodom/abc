@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/717-multi-slot-projection/src/index.html",
         "browser": "apps/abc/717-multi-slot-projection/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/717-multi-slot-projection/tsconfig.app.json",
         "assets": [
           "apps/abc/717-multi-slot-projection/src/favicon.ico",

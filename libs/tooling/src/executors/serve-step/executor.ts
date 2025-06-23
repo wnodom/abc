@@ -14,6 +14,38 @@ if (process.env['DEVCONTAINER']) {
   );
 }
 
+// Run just the specified project:target, without the API server.
+// (See below for the commented-out previous version.)
+export default async function serveStepExecutor(
+  options: ServeStepExecutorSchema,
+  context: ExecutorContext
+) {
+  const [projectName, targetName] = options.serveTarget.split(':');
+  if (!projectName || !targetName) {
+    throw new Error(
+      'Unable to compute project name and target name from `serveTarget` option'
+    );
+  }
+  const appResults = await runExecutor(
+    {
+      project: projectName,
+      target: targetName,
+      configuration: context.configurationName
+    },
+    executorOptionOverrides,
+    context
+  );
+
+  for await (const result of appResults) {
+    if (!result.success) {
+      return result;
+    }
+  }
+}
+
+// This version of serveStepExecutor runs the API server along
+// with the specified project and target.
+/* 
 export default async function serveStepExecutor(
   options: ServeStepExecutorSchema,
   context: ExecutorContext
@@ -62,3 +94,5 @@ export default async function serveStepExecutor(
     }
   }
 }
+
+*/

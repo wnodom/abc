@@ -1,24 +1,25 @@
-import { Directive, Input, OnDestroy } from '@angular/core';
+import { Directive, OnDestroy, input, signal } from '@angular/core';
 
 @Directive({
   selector: '[appBounce]',
   host: {
-    '[style.transform]': 'transform'
+    '[style.transform]': 'transform()'
   }
 })
 export class BounceDirective implements OnDestroy {
-  transform = '';
+  transform = signal('');
+
   // Note that this input is not required, because the default is
   // enough
-  @Input() speed = 25;
+  readonly speed = input(25);
 
   private n = 0;
 
   private readonly intervalId = window.setInterval(() => {
     this.n = this.n + 0.1;
     const rotation = Math.sin(this.n) * 5;
-    this.transform = `rotate(${rotation}deg)`;
-  }, this.speed);
+    this.transform.set(`rotate(${rotation}deg)`);
+  }, this.speed());
 
   ngOnDestroy() {
     clearInterval(this.intervalId);

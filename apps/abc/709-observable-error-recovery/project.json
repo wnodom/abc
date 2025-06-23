@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/709-observable-error-recovery/src/index.html",
         "browser": "apps/abc/709-observable-error-recovery/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/709-observable-error-recovery/tsconfig.app.json",
         "assets": [
           "apps/abc/709-observable-error-recovery/src/favicon.ico",

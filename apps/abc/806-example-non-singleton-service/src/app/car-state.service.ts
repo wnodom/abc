@@ -57,11 +57,6 @@ export const wheelTypes = [
   'Stone'
 ];
 
-// This class has no real dependency on Angular; by skipping the
-// unnecessary Injectable decorator, that is made obvious when looking
-// at the imports.
-// @Injectable()
-
 @Injectable()
 export class CarStateService {
   state: BehaviorSubject<CarState>;

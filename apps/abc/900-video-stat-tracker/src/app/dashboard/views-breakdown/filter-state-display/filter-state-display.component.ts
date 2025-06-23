@@ -1,6 +1,5 @@
 import { DatePipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
 
 import { DashboardService } from '../../dashboard.service';
 
@@ -11,13 +10,5 @@ import { DashboardService } from '../../dashboard.service';
   imports: [DatePipe]
 })
 export class FilterStateDisplayComponent {
-  filterForm: FormGroup<{
-    region: FormControl<string>;
-    dateTo: FormControl<string>;
-    dateFrom: FormControl<string>;
-    minor: FormControl<boolean>;
-    adults: FormControl<boolean>;
-    middleAged: FormControl<boolean>;
-    retired: FormControl<boolean>;
-  }> = inject(DashboardService).filterForm;
+  filterForm = inject(DashboardService).filterForm;
 }

@@ -1,4 +1,4 @@
-# Workshop for this step
+# Workshop
 
 With Effects, our Articles are now fully CRUD to the server. We 
 will not make all of those changes for Authors, because Authors 

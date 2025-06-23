@@ -1,4 +1,4 @@
-import { Component, Input, inject } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 
 import { EmployeeListHeaderComponent } from '../employee-list-header/employee-list-header.component';
@@ -12,8 +12,8 @@ import { Employee, TableOptions } from '../employees.service';
 export class EmployeeListComponent {
   private router = inject(Router);
 
-  @Input({ required: true }) employees!: Employee[];
-  @Input({ required: true }) options: TableOptions | undefined;
+  readonly employees = input.required<Employee[]>();
+  readonly options = input.required<TableOptions | undefined>();
 
   headers = [
     {
@@ -35,8 +35,9 @@ export class EmployeeListComponent {
   ];
 
   headerClicked(sortBy: string) {
-    if (this.options?.sortBy === sortBy) {
-      this.changeDirection(this.options);
+    const options = this.options();
+    if (options?.sortBy === sortBy) {
+      this.changeDirection(options);
     } else {
       const queryParams = { sortBy, sortDirection: undefined };
       void this.router.navigate([], {

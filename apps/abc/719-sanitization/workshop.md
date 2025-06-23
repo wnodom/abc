@@ -1,4 +1,4 @@
-# Workshop for this step
+# Workshop
 
 - Edit some of the sample data in your application to include a field
   with "dangerous" HTML.

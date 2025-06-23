@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/722-custom-pipes/src/index.html",
         "browser": "apps/abc/722-custom-pipes/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/722-custom-pipes/tsconfig.app.json",
         "assets": [
           "apps/abc/722-custom-pipes/src/favicon.ico",

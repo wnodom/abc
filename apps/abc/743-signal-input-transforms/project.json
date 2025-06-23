@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/743-signal-input-transforms/src/index.html",
         "browser": "apps/abc/743-signal-input-transforms/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/743-signal-input-transforms/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [

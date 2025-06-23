@@ -1,6 +1,6 @@
-@if (videoUrl) {
+@if (videoUrl(); as url) {
   <iframe
-    [src]="videoUrl"
+    [src]="url"
     title="Video Container"
     frameborder="0"
     allow="fullscreen; accelerometer; autoplay; encrypted-media; gyroscope;"

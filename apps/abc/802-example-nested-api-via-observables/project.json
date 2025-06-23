@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/802-example-nested-api-via-observables/src/index.html",
         "browser": "apps/abc/802-example-nested-api-via-observables/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/802-example-nested-api-via-observables/tsconfig.app.json",
         "assets": [
           "apps/abc/802-example-nested-api-via-observables/src/favicon.ico",

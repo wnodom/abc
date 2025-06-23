@@ -1,7 +1,7 @@
 import { provideHttpClient } from '@angular/common/http';
 import {
   ApplicationConfig,
-  provideZoneChangeDetection
+  provideZonelessChangeDetection
 } from '@angular/core';
 
 import { ConsoleLogHandler } from './loggers/console-log-handler';
@@ -10,7 +10,8 @@ import { TelemetryLogHandler } from './loggers/telemetry-log-handler';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideZonelessChangeDetection(),
+    provideHttpClient(),
     {
       provide: LogHandlers,
       useClass: ConsoleLogHandler,
@@ -20,7 +21,6 @@ export const appConfig: ApplicationConfig = {
       provide: LogHandlers,
       useClass: TelemetryLogHandler,
       multi: true
-    },
-    provideHttpClient()
+    }
   ]
 };

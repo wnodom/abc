@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 import { Order } from '../api-types';
 import { OrderHeaderComponent } from '../order-header/order-header.component';
@@ -10,10 +10,8 @@ import { OrderItemsComponent } from '../order-items/order-items.component';
   imports: [OrderHeaderComponent, OrderItemsComponent]
 })
 export class OrderDetailsComponent {
-  @Input({
-    required: true,
+  readonly sod = input.required<Order | undefined>({
     // eslint-disable-next-line @angular-eslint/no-input-rename
     alias: 'selectedOrderDetails'
-  })
-  sod: Order | undefined;
+  });
 }

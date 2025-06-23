@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/734-signals-rxjs/src/index.html",
         "browser": "apps/abc/734-signals-rxjs/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/734-signals-rxjs/tsconfig.app.json",
         "assets": [
           "apps/abc/734-signals-rxjs/src/favicon.ico",

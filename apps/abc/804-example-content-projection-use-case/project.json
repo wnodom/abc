@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/804-example-content-projection-use-case/src/index.html",
         "browser": "apps/abc/804-example-content-projection-use-case/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/804-example-content-projection-use-case/tsconfig.app.json",
         "assets": [
           "apps/abc/804-example-content-projection-use-case/src/favicon.ico",

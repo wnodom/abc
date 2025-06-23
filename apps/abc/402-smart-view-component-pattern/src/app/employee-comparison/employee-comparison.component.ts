@@ -1,9 +1,4 @@
-import {
-  Component,
-  EventEmitter,
-  Input,
-  Output
-} from '@angular/core';
+import { Component, output, input } from '@angular/core';
 
 import { EmployeeDisplayComponent } from '../employee-display/employee-display.component';
 import { Employee } from '../employee-loader.service';
@@ -15,7 +10,7 @@ import { Employee } from '../employee-loader.service';
   imports: [EmployeeDisplayComponent]
 })
 export class EmployeeComparisonComponent {
-  @Input({ required: true }) theFirstEmployee: Employee | undefined;
-  @Input({ required: true }) theSecondEmployee: Employee | undefined;
-  @Output() reverse = new EventEmitter<void>();
+  readonly theFirstEmployee = input.required<Employee | undefined>();
+  readonly theSecondEmployee = input.required<Employee | undefined>();
+  readonly reverse = output<void>();
 }

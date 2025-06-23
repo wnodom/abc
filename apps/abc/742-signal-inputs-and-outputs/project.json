@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/742-signal-inputs-and-outputs/src/index.html",
         "browser": "apps/abc/742-signal-inputs-and-outputs/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/742-signal-inputs-and-outputs/tsconfig.app.json",
         "assets": [
           "apps/abc/742-signal-inputs-and-outputs/src/favicon.ico",

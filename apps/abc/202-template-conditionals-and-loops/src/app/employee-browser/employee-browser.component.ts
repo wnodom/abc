@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 const employees = [
   {
@@ -26,5 +26,6 @@ const employees = [
 })
 export default class EmployeeBrowserComponent {
   employeeList = employees;
-  showInactiveRoles = true;
+  // Note: the inferred type is WritableSignal<boolean>
+  showInactiveRoles = signal(true);
 }

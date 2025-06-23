@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/719-sanitization/src/index.html",
         "browser": "apps/abc/719-sanitization/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/719-sanitization/tsconfig.app.json",
         "assets": [
           "apps/abc/719-sanitization/src/favicon.ico",

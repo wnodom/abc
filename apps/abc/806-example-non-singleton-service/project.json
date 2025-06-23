@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/806-example-non-singleton-service/src/index.html",
         "browser": "apps/abc/806-example-non-singleton-service/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/806-example-non-singleton-service/tsconfig.app.json",
         "assets": [
           "apps/abc/806-example-non-singleton-service/src/favicon.ico",

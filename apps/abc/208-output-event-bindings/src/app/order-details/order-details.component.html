@@ -1,10 +1,9 @@
-@if (!sod) {
-  <div>Please select order to view details</div>
-}
-@if (sod) {
-  <div>
+<div>
+  @if (sod(); as details) {
     <header>Details</header>
-    <app-order-header [customerName]="sod.customer" />
-    <app-order-items [items]="sod.items" />
-  </div>
-}
+    <app-order-header [customerName]="details.customer" />
+    <app-order-items [items]="details.items" />
+  } @else {
+    Please select order to view details
+  }
+</div>

@@ -4,7 +4,11 @@ import { share } from 'rxjs';
 import { FxQuote } from './fx-quote';
 import { SseService } from './sse.service';
 
-const apiUrl = '/api';
+// Local API server
+// const apiUrl = '/api';
+
+// Hosted API server
+const apiUrl = 'https://api.angularbootcamp.com';
 
 @Injectable({
   providedIn: 'root'

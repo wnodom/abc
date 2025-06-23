@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/718-switch/src/index.html",
         "browser": "apps/abc/718-switch/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/718-switch/tsconfig.app.json",
         "assets": [
           "apps/abc/718-switch/src/favicon.ico",

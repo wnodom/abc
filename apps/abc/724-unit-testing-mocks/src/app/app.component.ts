@@ -1,3 +1,5 @@
+/* eslint-disable @angular-eslint/prefer-inject */
+
 import { Component } from '@angular/core';
 
 import { HelloService } from './hello.service';

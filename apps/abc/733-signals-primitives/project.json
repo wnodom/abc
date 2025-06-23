@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/733-signals-primitives/src/index.html",
         "browser": "apps/abc/733-signals-primitives/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/733-signals-primitives/tsconfig.app.json",
         "assets": [
           "apps/abc/733-signals-primitives/src/favicon.ico",

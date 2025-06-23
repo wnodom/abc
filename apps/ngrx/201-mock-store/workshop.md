@@ -1,4 +1,4 @@
-# Workshop for this step
+# Workshop
 
 We will write test from outside the store that mock the store.
 

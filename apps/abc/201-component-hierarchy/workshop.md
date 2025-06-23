@@ -1,4 +1,4 @@
-# Workshop for this step
+# Workshop
 
 Goals:
 
@@ -13,7 +13,7 @@ Goals:
    the standalone option by default.
 
 ```
-ng generate component dashboard
+npx ng generate component dashboard
 ```
 
 (On StackBlitz, right-click the app folder and choose to generate a
@@ -25,9 +25,9 @@ Add the 'dashboard/' prefix, so they are added in the right structure.
 For example, your commands may look something like this:
 
 ```
-ng generate component dashboard/videoList
-ng generate component dashboard/videoPlayer
-ng generate component dashboard/statFilters
+npx ng generate component dashboard/videoList
+npx ng generate component dashboard/videoPlayer
+npx ng generate component dashboard/statFilters
 ```
 
 (The stat graphs component will be added later, time permitting.)

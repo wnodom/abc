@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/803-example-dynamic-reactive-form/src/index.html",
         "browser": "apps/abc/803-example-dynamic-reactive-form/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/803-example-dynamic-reactive-form/tsconfig.app.json",
         "assets": [
           "apps/abc/803-example-dynamic-reactive-form/src/favicon.ico",

@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/500-nested-routing/src/index.html",
         "browser": "apps/abc/500-nested-routing/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/500-nested-routing/tsconfig.app.json",
         "assets": [
           "apps/abc/500-nested-routing/src/favicon.ico",

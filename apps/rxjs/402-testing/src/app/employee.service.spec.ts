@@ -7,6 +7,12 @@ import { TestBed, waitForAsync } from '@angular/core/testing';
 import { Employee } from './employee';
 import { EmployeeService } from './employee.service';
 
+// Local API server
+// const apiUrl = '/api';
+
+// Hosted API server
+const apiUrl = 'https://api.angularbootcamp.com';
+
 describe('Employee Service', () => {
   let httpTestingController: HttpTestingController;
   let service: EmployeeService;
@@ -44,7 +50,9 @@ describe('Employee Service', () => {
       expect(data).toEqual(['Bob', 'Joe', 'foo']);
     });
 
-    const req = httpTestingController.expectOne('/api/employees');
+    const req = httpTestingController.expectOne(
+      apiUrl + '/employees'
+    );
 
     expect(req.request.method).toEqual('GET');
 
@@ -61,7 +69,9 @@ describe('Employee Service', () => {
       expect(data).toEqual(['Bob', 'Joe', 'Sara']);
     });
 
-    const req = httpTestingController.expectOne('/api/employees');
+    const req = httpTestingController.expectOne(
+      apiUrl + '/employees'
+    );
 
     expect(req.request.method).toEqual('GET');
 

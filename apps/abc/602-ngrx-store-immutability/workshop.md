@@ -1,4 +1,4 @@
-# Workshop for this step
+# Workshop
 
 To get started there should be two items in the application store:
 The video list and the selected video

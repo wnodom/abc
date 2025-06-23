@@ -7,5 +7,5 @@ import { Item } from '../api-types';
   templateUrl: './order-items.component.html'
 })
 export class OrderItemsComponent {
-  items = input.required<Item[]>();
+  readonly items = input.required<Item[]>();
 }

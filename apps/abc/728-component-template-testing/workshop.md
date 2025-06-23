@@ -1,11 +1,11 @@
-# Workshop for this step
+# Workshop
 
 When you generated components and services using the CLI, it also generated a test file for each one. Let's start by getting those basic tests to pass.
 
 ## Run tests with the CLI
 
 ```
-ng test
+npx ng test
 ```
 
 This will use the Karma test runner to run all spec files in your project. It will also watch for changes and rerun the tests as needed.

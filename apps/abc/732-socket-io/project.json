@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/732-socket-io/src/index.html",
         "browser": "apps/abc/732-socket-io/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/732-socket-io/tsconfig.app.json",
         "assets": [
           "apps/abc/732-socket-io/src/favicon.ico",

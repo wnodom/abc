@@ -1,9 +1,4 @@
-import {
-  Component,
-  EventEmitter,
-  Input,
-  Output
-} from '@angular/core';
+import { Component, input, output } from '@angular/core';
 
 import { Employee } from './employee';
 
@@ -12,6 +7,6 @@ import { Employee } from './employee';
   templateUrl: './employee-list.component.html'
 })
 export class EmployeeListComponent {
-  @Input({ required: true }) employees!: Employee[];
-  @Output() selectedEmployee = new EventEmitter<number>();
+  readonly employees = input.required<Employee[]>();
+  readonly selectedEmployee = output<number>();
 }

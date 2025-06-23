@@ -1,9 +1,4 @@
-import {
-  Component,
-  EventEmitter,
-  Input,
-  Output
-} from '@angular/core';
+import { Component, output, input } from '@angular/core';
 
 import { Task } from '../types';
 
@@ -12,10 +7,10 @@ import { Task } from '../types';
   templateUrl: './todo-list.component.html'
 })
 export class TodoListComponent {
-  @Input() list: Task[] = [];
-  @Input() icon = '';
+  readonly list = input<Task[]>([]);
+  readonly icon = input('');
 
-  @Output() setTaskStatus = new EventEmitter<Task>();
+  readonly setTaskStatus = output<Task>();
 
   setStat(task: Task) {
     this.setTaskStatus.emit(task);

@@ -1,4 +1,4 @@
-# Workshop for this step
+# Workshop
 
 Our components know that they are interacting with NgRx. We will 
 add and expand services to hide the implementation details from 

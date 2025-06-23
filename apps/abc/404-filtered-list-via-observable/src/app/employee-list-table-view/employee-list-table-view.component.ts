@@ -1,9 +1,4 @@
-import {
-  Component,
-  EventEmitter,
-  Input,
-  Output
-} from '@angular/core';
+import { Component, output, input } from '@angular/core';
 
 import { Employee } from '../employee';
 
@@ -13,7 +8,7 @@ import { Employee } from '../employee';
   styleUrl: './employee-list-table-view.component.scss'
 })
 export class EmployeeListTableViewComponent {
-  @Input({ required: true }) list!: Employee[];
-  @Input({ required: true }) selectedId!: number | null;
-  @Output() selectId = new EventEmitter<number>();
+  readonly list = input.required<Employee[]>();
+  readonly selectedId = input.required<number | null>();
+  readonly selectId = output<number>();
 }

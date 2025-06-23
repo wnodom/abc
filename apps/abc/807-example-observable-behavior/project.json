@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/807-example-observable-behavior/src/index.html",
         "browser": "apps/abc/807-example-observable-behavior/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/807-example-observable-behavior/tsconfig.app.json",
         "assets": [
           "apps/abc/807-example-observable-behavior/src/favicon.ico",

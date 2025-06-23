@@ -1,26 +1,19 @@
 import { provideHttpClient } from '@angular/common/http';
 import {
   ApplicationConfig,
-  provideZoneChangeDetection
+  provideZonelessChangeDetection
 } from '@angular/core';
 import {
   provideRouter,
-  withComponentInputBinding,
-  withHashLocation,
-  withInMemoryScrolling
+  withComponentInputBinding
 } from '@angular/router';
 
 import { appRoutes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(
-      appRoutes,
-      withHashLocation(),
-      withInMemoryScrolling({ scrollPositionRestoration: 'enabled' }),
-      withComponentInputBinding()
-    ),
+    provideZonelessChangeDetection(),
+    provideRouter(appRoutes, withComponentInputBinding()),
     provideHttpClient()
   ]
 };

@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal, computed } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
@@ -6,15 +6,17 @@ import { DomSanitizer } from '@angular/platform-browser';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  stringWithHtml = `
+  private readonly sanitizer = inject(DomSanitizer);
+
+  stringWithHtml = signal(`
     <button onClick="window.alert('hello from old-school HTML/JS');">
       Press Me
     </button>
     <em>Hello from <strong>HTML</strong></em>
-  `;
+  `);
 
-  // TODO: Do our part to make sure HTML is safe
-  htmlProperty = inject(DomSanitizer).bypassSecurityTrustHtml(
-    this.stringWithHtml
+  // TODO: Make sure the HTML is actually safe. :)
+  htmlProperty = computed(() =>
+    this.sanitizer.bypassSecurityTrustHtml(this.stringWithHtml())
   );
 }

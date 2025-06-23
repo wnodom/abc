@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/103-multiple-components/src/index.html",
         "browser": "apps/abc/103-multiple-components/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/103-multiple-components/tsconfig.app.json",
         "assets": [
           "apps/abc/103-multiple-components/src/favicon.ico",

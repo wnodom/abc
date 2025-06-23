@@ -32,10 +32,10 @@
   {{ expirationDate | date: 'longDate' | uppercase }}
 </article>
 
-<button (click)="showJSON = !showJSON">
-  {{ showJSON ? 'Hide' : 'Show' }} data for export
+<button (click)="showJSON.set(!showJSON())">
+  {{ showJSON() ? 'Hide' : 'Show' }} data for export
 </button>
 
-@if (showJSON) {
+@if (showJSON()) {
   <pre>{{ records | json }}</pre>
 }

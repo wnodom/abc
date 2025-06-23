@@ -1,19 +1,17 @@
-@if (employee) {
+@if (employee(); as emp) {
   <article>
-    <header>
-      Name: {{ employee.firstName }} {{ employee.lastName }}
-    </header>
+    <header>Name: {{ emp.firstName }} {{ emp.lastName }}</header>
     <p>
       Email:
-      <strong>{{ employee.email }}</strong>
+      <strong>{{ emp.email }}</strong>
     </p>
     <p>
       Hours Worked:
-      <strong>{{ employee.hoursWorked }}</strong>
+      <strong>{{ emp.hoursWorked }}</strong>
     </p>
     <p>
       Hourly Wage:
-      <strong>{{ employee.hourlyWage }}</strong>
+      <strong>{{ emp.hourlyWage }}</strong>
     </p>
   </article>
 }

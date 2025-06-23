@@ -11,7 +11,6 @@ ecosystem. Here is a rough idea of the overall agenda:
 * Development / build tooling (Angular CLI)
 * Advanced and varied features (that are okay to learn later)
 * Examples, details, surrounding ecosystem
-* Moving from AngularJS 1.x / Unlearning AngularJS 1.x
 
 ## Workshops
 
@@ -78,20 +77,5 @@ cd abc
 npm run serve 100
 ```
 
-Change "100" to the example number. Press control-C to stop the
+Change "100" to the example number. Press Control+C to stop the
 process so you can restart with another example number.
-
-## Introduction to "abc" - the first part of the class
-
-This is a standalone, ready-to-use set of files, sufficient for
-starting the class. The only tools necessary for this portion are a
-text editor, the web server, and the demo-API server.
-
-Live-server conveniently includes "live reload" in the box. It will
-automatically inject pages it serves with a bit of JavaScript to
-access a web socket to automatically reload the page when the source
-files change. This means you will not have to click refresh in the
-browser.
-
-Json-server provides a fake, demo API to use with learning steps that
-show API use.

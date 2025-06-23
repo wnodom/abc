@@ -1,21 +1,21 @@
-.employee-name.bonus::after {
+.employee-name.good::after {
   font-family: 'Material Icons';
-  font-weight: 400;
-  content: 'attach_money';
+  font-size: larger;
+  content: 'thumb_up';
 }
 
-.employee-name.fired::after {
+.employee-name.great::after {
   font-family: 'Material Icons';
-  font-weight: 400;
-  content: 'not_interested';
+  font-size: larger;
+  content: 'rocket_launch';
 }
 
-.bar.bonus {
+.bar.good {
   background-color: var(--abc-success-color);
 }
 
-.bar.fired {
-  background-color: var(--abc-failure-color);
+.bar.great {
+  background-color: var(--abc-important-color);
 }
 
 .bar {

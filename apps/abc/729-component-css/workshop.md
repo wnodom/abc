@@ -1,4 +1,4 @@
-# Workshop for this step
+# Workshop
 
 Instructor sometimes skip this workshop for time; as it is not
 necessary for the functioning but only for a better appearance.

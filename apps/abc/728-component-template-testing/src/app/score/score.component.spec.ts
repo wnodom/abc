@@ -20,7 +20,6 @@ describe('ScoreComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ScoreComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   describe('score text', () => {
@@ -38,9 +37,10 @@ describe('ScoreComponent', () => {
       expect(valueDisplayEl.textContent).toEqual('');
     });
 
-    it('should display a score that is set', () => {
-      component.value = 50;
+    it('should display a score that is set', async () => {
+      fixture.componentRef.setInput('value', 50);
       fixture.detectChanges(); // triggers data-binding
+
       expect(valueDisplayEl.textContent).toContain('50');
     });
   });
@@ -53,7 +53,9 @@ describe('ScoreComponent', () => {
     });
 
     it('should result in a notify event when clicked', () => {
-      component.value = 42;
+      fixture.componentRef.setInput('value', 42);
+      fixture.detectChanges(); // triggers data-binding
+
       let notification = '';
       component.notify.subscribe(
         (event: string) => (notification = event)
@@ -141,6 +143,6 @@ describe('ScoreComponent inside a test host', () => {
 });
 
 // All of this raises questions: why are we testing this? What are we
-// testing? Should we expect Angular bindings to work, or should we
-// test them?
-// The answer likely depends upon company policies and what kind of Angular code is being tested.
+// testing? Should we expect Angular bindings to work, or should we test
+// them? The answer likely depends upon company policies and what kind
+// of Angular code is being tested.

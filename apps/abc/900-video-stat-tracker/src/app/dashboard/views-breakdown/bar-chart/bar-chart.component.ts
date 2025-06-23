@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 import { GraphData, Rect } from '../graph-helper';
 
@@ -8,7 +8,7 @@ import { GraphData, Rect } from '../graph-helper';
   styleUrl: './bar-chart.component.scss'
 })
 export class BarChartComponent {
-  @Input({ required: true }) graphData: GraphData | undefined;
+  readonly graphData = input.required<GraphData | undefined>();
 
   positionAndSizeOf(rect: Rect) {
     return [rect.x, rect.y, rect.width, rect.height].join(';');

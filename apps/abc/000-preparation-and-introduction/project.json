@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/000-preparation-and-introduction/src/index.html",
         "browser": "apps/abc/000-preparation-and-introduction/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/000-preparation-and-introduction/tsconfig.app.json",
         "assets": [
           "apps/abc/000-preparation-and-introduction/src/favicon.ico",

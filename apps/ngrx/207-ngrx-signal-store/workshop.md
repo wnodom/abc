@@ -1,4 +1,4 @@
-# Workshop for this step
+# Workshop
 
 We will use Entity to manage the author and article data.
 

@@ -4,7 +4,11 @@ import { delay, Observable } from 'rxjs';
 
 import { Employee } from './employee';
 
-const apiUrl = '/api';
+// Local API server
+// const apiUrl = '/api';
+
+// Hosted API server
+const apiUrl = 'https://api.angularbootcamp.com';
 
 // Configure the amount of latency and jitter to simulate
 const apiLatency = 100;

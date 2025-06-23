@@ -1,10 +1,8 @@
-import { NgIf } from '@angular/common';
 import {
   booleanAttribute,
   Component,
-  EventEmitter,
-  Input,
-  Output
+  output,
+  input
 } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -19,7 +17,6 @@ import { FocusInputDirective } from './focus-input.directive';
   templateUrl: 'display-or-edit.component.html',
   styleUrls: ['display-or-edit.component.scss'],
   imports: [
-    NgIf,
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
@@ -29,13 +26,15 @@ import { FocusInputDirective } from './focus-input.directive';
   ]
 })
 export class DisplayOrEditComponent {
-  @Input({ required: true }) control!: FormControl;
-  @Input({ transform: booleanAttribute }) useTextArea = false;
-  @Input({ transform: booleanAttribute }) useDelete = false;
-  @Input() actionsPosition: 'before' | 'after' = 'before';
+  readonly control = input.required<FormControl>();
+  readonly useTextArea = input(false, {
+    transform: booleanAttribute
+  });
+  readonly useDelete = input(false, { transform: booleanAttribute });
+  readonly actionsPosition = input<'before' | 'after'>('before');
 
-  @Output() updated = new EventEmitter<void>();
-  @Output() deleteClicked = new EventEmitter<void>();
+  readonly updated = output<void>();
+  readonly deleteClicked = output<void>();
 
   editing = false;
 

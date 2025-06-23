@@ -3,11 +3,7 @@ import {
   ApplicationConfig,
   provideZoneChangeDetection
 } from '@angular/core';
-import {
-  provideRouter,
-  withHashLocation,
-  withInMemoryScrolling
-} from '@angular/router';
+import { provideRouter } from '@angular/router';
 import { provideEffects } from '@ngrx/effects';
 import { provideStore } from '@ngrx/store';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
@@ -35,10 +31,6 @@ export const appConfig: ApplicationConfig = {
       trace: true
     }),
     provideHttpClient(),
-    provideRouter(
-      appRoutes,
-      withHashLocation(),
-      withInMemoryScrolling({ scrollPositionRestoration: 'enabled' })
-    )
+    provideRouter(appRoutes)
   ]
 };

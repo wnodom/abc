@@ -1,4 +1,4 @@
-# Workshop for this step
+# Workshop
 
 We will add memoized selectors to access our blog title state.
 

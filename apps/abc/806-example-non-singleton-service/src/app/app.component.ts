@@ -1,8 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 import { CarOrderComponent } from './car-order/car-order.component';
 
 // import { CarStateService } from './car-state.service';
+
+interface Car {
+  id: number;
+}
 
 @Component({
   selector: 'app-root',
@@ -12,9 +16,9 @@ import { CarOrderComponent } from './car-order/car-order.component';
   imports: [CarOrderComponent]
 })
 export class AppComponent {
-  cars: { id: number }[] = [];
+  cars = signal<Car[]>([]);
 
   addOne() {
-    this.cars.push({ id: this.cars.length + 1 });
+    this.cars.update(arr => [...arr, { id: arr.length + 1 }]);
   }
 }

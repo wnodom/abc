@@ -20,7 +20,7 @@ export class HighlightAndBorderDiComponent {
   border = inject(BorderDirective);
 
   constructor() {
-    this.highlight.color = 'var(--abc-category-7-color)';
-    this.border.color = 'var(--abc-category-8-color)';
+    this.highlight.color.set('var(--abc-category-7-color)');
+    this.border.color.set('var(--abc-category-8-color)');
   }
 }

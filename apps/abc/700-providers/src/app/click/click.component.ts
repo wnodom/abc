@@ -1,5 +1,6 @@
 import { AsyncPipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 import { ColorSchemeObserver } from '@class-materials/shared/util-color-scheme-observer';
 
@@ -8,10 +9,9 @@ import { ClickService } from '../click.service';
 @Component({
   selector: 'app-local-click',
   template: `
-    @let colorScheme = colorScheme$ | async;
     <button>
       <img
-        src="assets/abc-logo-{{ colorScheme }}-mode.svg"
+        src="assets/abc-logo-{{ colorScheme() }}-mode.svg"
         (click)="increment()"
         alt="Angular Boot Camp"
       />
@@ -22,8 +22,11 @@ import { ClickService } from '../click.service';
   imports: [AsyncPipe]
 })
 export class ClickComponent {
-  readonly colorScheme$ = inject(ColorSchemeObserver).observe();
-  private service = inject(ClickService);
+  readonly colorScheme = toSignal(
+    inject(ColorSchemeObserver).observe()
+  );
+
+  private readonly service = inject(ClickService);
 
   readonly totalClicks = this.service.clickCount;
 

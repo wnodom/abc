@@ -6,7 +6,7 @@
   @for (c of constellations; track c.iauAbbreviation) {
     <a
       [queryParams]="{ id: c.iauAbbreviation }"
-      routerLink
+      routerLink="."
       routerLinkActive="active-link"
       [routerLinkActiveOptions]="{
         paths: 'subset',

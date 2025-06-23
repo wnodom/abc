@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/805-example-binding-to-svg/src/index.html",
         "browser": "apps/abc/805-example-binding-to-svg/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/805-example-binding-to-svg/tsconfig.app.json",
         "assets": [
           "apps/abc/805-example-binding-to-svg/src/favicon.ico",

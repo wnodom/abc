@@ -1,4 +1,4 @@
-# Workshop for this step
+# Workshop
 
 Move initializing the video list into Effects.
 

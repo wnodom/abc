@@ -1,3 +1,3 @@
-# Workshop for this step
+# Workshop
 
 No workshop for this step

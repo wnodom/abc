@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/708-reactive-control/src/index.html",
         "browser": "apps/abc/708-reactive-control/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/708-reactive-control/tsconfig.app.json",
         "assets": [
           "apps/abc/708-reactive-control/src/favicon.ico",

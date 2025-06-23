@@ -1,7 +1,8 @@
 :host {
+  container-type: inline-size;
   display: block;
-  min-width: 300px;
-  margin-bottom: 3rem;
+  min-width: 30rem;
+  margin-block-end: 3rem;
   padding: 2rem;
 
   a {
@@ -10,7 +11,7 @@
   }
 
   strong {
-    color: rgb(203, 36, 46); /* dark red from ABC logo text */
+    color: var(--abc-adaptive-red);
     font-weight: bold;
   }
 
@@ -18,12 +19,12 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     place-items: center;
-    margin-bottom: 2rem;
+    margin-block-end: 2rem;
     font-size: 1.5rem;
     white-space: nowrap;
 
     img {
-      /* Keep the SVGs from shrinking to 0x0. */
+      // Keep the SVGs from shrinking to 0x0.
       width: 100%;
     }
 
@@ -33,15 +34,14 @@
   }
 
   .offerings {
-    /* Use columns instead of a grid, so columns automatically stay
-     * balanced without having to artificially divide the markup into
-     * separate grid items.
-     */
+    // Use columns instead of a grid, so columns automatically stay
+    // balanced without having to artificially divide the markup into
+    // separate grid items.
     column-count: 2;
     column-gap: 2rem;
 
     p {
-      margin-top: 0;
+      margin-block-start: 0;
     }
   }
 
@@ -49,30 +49,14 @@
     display: grid;
     place-items: center;
     font-size: 2rem;
-    /* Keep text centered even if it wraps. */
+    margin-block-start: 2rem;
+
+    // Keep text centered even if it wraps.
     text-align: center;
-
-    p {
-      margin: 0;
-    }
   }
 
-  .events {
-    display: grid;
-    place-items: center;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-
-    iframe {
-      display: block;
-      border: 0;
-      height: 150px;
-      width: 350px;
-    }
-  }
-
-  /* Switch to a single-column view for narrow viewports. */
-  @media (max-width: 700px) {
+  // Switch to a single-column view for narrow viewports.
+  @container (width < 30rem) {
     .banner {
       grid-template-columns: 1fr;
 

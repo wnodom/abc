@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/704-secondary-routes/src/index.html",
         "browser": "apps/abc/704-secondary-routes/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/704-secondary-routes/tsconfig.app.json",
         "assets": [
           "apps/abc/704-secondary-routes/src/favicon.ico",

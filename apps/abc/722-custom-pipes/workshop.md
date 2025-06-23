@@ -1,4 +1,4 @@
-# Workshop for this step
+# Workshop
 
 - Make a custom pipe that will convert large numbers into shorter ones
   with 'k' or 'm' or 'b', etc.

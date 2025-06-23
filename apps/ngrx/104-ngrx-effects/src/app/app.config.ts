@@ -3,7 +3,7 @@ import {
   ApplicationConfig,
   provideZoneChangeDetection
 } from '@angular/core';
-import { provideRouter, withHashLocation } from '@angular/router';
+import { provideRouter } from '@angular/router';
 import { provideStore } from '@ngrx/store';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 
@@ -16,7 +16,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideHttpClient(),
-    provideRouter(appRoutes, withHashLocation()),
+    provideRouter(appRoutes),
     provideStore(reducers),
     provideStoreDevtools({
       maxAge: 50,

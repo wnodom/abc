@@ -1,5 +1,5 @@
 import { AsyncPipe } from '@angular/common';
-import { Component, inject, Input } from '@angular/core';
+import { Component, effect, inject, input } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Observable, of } from 'rxjs';
 
@@ -22,11 +22,7 @@ function observeColorscheme() {
     '../constellation-viewer-shared-template.component.html'
 })
 export default class ConstellationViewerComponent {
-  @Input() set id(iauAbbreviation: string) {
-    if (iauAbbreviation) {
-      this.selectConstellation(iauAbbreviation);
-    }
-  }
+  readonly id = input<string | undefined>();
 
   private readonly logger = inject<LoggerService>(LoggerService, {
     optional: true
@@ -42,6 +38,17 @@ export default class ConstellationViewerComponent {
   selectedConstellation$: Observable<Constellation | null> = of(null);
   imageZoomed = false;
   imageLoaded = false;
+
+  constructor() {
+    // When the constellation ID changes, load the corresponding
+    // constellation.
+    effect(() => {
+      const iauAbbreviation = this.id();
+      if (iauAbbreviation) {
+        this.selectConstellation(iauAbbreviation);
+      }
+    });
+  }
 
   selectConstellation(iauAbbreviation: string) {
     this.logger?.log(

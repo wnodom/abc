@@ -11,7 +11,11 @@ export interface Employee {
   hourlyWage: number;
 }
 
-const apiUrl = '/api';
+// Local API server
+// const apiUrl = '/api';
+
+// Hosted API server
+const apiUrl = 'https://api.angularbootcamp.com';
 
 @Injectable({ providedIn: 'root' })
 export class EmployeeLoaderService {

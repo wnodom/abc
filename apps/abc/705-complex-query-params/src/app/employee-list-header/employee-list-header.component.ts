@@ -1,9 +1,4 @@
-import {
-  Component,
-  EventEmitter,
-  Input,
-  Output
-} from '@angular/core';
+import { Component, input, output } from '@angular/core';
 
 import { TableOptions } from '../employees.service';
 
@@ -13,8 +8,9 @@ import { TableOptions } from '../employees.service';
   styleUrl: './employee-list-header.component.scss'
 })
 export class EmployeeListHeaderComponent {
-  @Input({ required: true }) propertyName!: string;
-  @Input({ required: true }) display!: string;
-  @Input({ required: true }) options: TableOptions | undefined;
-  @Output() clicked = new EventEmitter<string>();
+  readonly propertyName = input.required<string>();
+  readonly display = input.required<string>();
+  readonly options = input.required<TableOptions | undefined>();
+
+  readonly clicked = output<string>();
 }

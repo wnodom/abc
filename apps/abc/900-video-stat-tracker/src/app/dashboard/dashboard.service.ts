@@ -18,6 +18,10 @@ import {
 
 import { Video } from './dashboard.types';
 
+// Local API server
+// const apiUrl = 'https://api.angularbootcamp.com';
+
+// Hosted API server
 const apiUrl = 'https://api.angularbootcamp.com';
 
 @Injectable({

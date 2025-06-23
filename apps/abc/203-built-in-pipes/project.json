@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/203-built-in-pipes/src/index.html",
         "browser": "apps/abc/203-built-in-pipes/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/203-built-in-pipes/tsconfig.app.json",
         "assets": [
           "apps/abc/203-built-in-pipes/src/favicon.ico",

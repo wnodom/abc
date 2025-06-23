@@ -3,7 +3,7 @@
 <article>
   <header>Completed</header>
   <app-todo-list
-    [list]="done"
+    [list]="done()"
     [icon]="checkbox"
     (toggleTask)="toggle($event, true)"
   />
@@ -12,7 +12,7 @@
 <article>
   <header>In-Progress</header>
   <app-todo-list
-    [list]="todo"
+    [list]="todo()"
     [icon]="outline"
     (toggleTask)="toggle($event, false)"
   />

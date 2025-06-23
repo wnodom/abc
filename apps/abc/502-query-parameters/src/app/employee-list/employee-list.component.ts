@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 import { Employee } from '../employee';
@@ -10,6 +10,6 @@ import { Employee } from '../employee';
   imports: [RouterLink]
 })
 export class EmployeeListComponent {
-  @Input({ required: true }) list!: Employee[];
-  @Input({ required: true }) selectedId: number | undefined;
+  readonly list = input.required<Employee[]>();
+  readonly selectedId = input.required<number | undefined>();
 }

@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/202-template-conditionals-and-loops/src/index.html",
         "browser": "apps/abc/202-template-conditionals-and-loops/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/202-template-conditionals-and-loops/tsconfig.app.json",
         "assets": [
           "apps/abc/202-template-conditionals-and-loops/src/favicon.ico",

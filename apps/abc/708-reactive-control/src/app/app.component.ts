@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import {
   FormControl,
   Validators,
@@ -12,13 +12,13 @@ import {
 })
 export class AppComponent {
   name = new FormControl('', Validators.required);
-  outputValue = '';
+  outputValue = signal('');
 
   setValue() {
     this.name.setValue('Set from code');
   }
 
   useValue() {
-    this.outputValue = 'testing 123 - ' + this.name.value;
+    this.outputValue.set('testing 123 - ' + this.name.value);
   }
 }

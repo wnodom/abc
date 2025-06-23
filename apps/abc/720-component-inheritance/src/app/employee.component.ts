@@ -1,9 +1,4 @@
-import {
-  Component,
-  EventEmitter,
-  Input,
-  Output
-} from '@angular/core';
+import { Component, output, input } from '@angular/core';
 
 import { Employee } from './interfaces';
 
@@ -12,8 +7,8 @@ import { Employee } from './interfaces';
   template: ''
 })
 export class EmployeeComponent {
-  @Input({ required: true }) employees!: Employee[];
-  @Output() selectEmp = new EventEmitter();
+  readonly employees = input.required<Employee[]>();
+  readonly selectEmp = output<Employee>();
 
   heading = 'Employees';
 

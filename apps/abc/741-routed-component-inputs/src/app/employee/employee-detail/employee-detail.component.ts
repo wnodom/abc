@@ -1,5 +1,5 @@
 import { AsyncPipe } from '@angular/common';
-import { Component, inject, Input } from '@angular/core';
+import { Component, effect, inject, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Observable, share } from 'rxjs';
 
@@ -12,11 +12,15 @@ import { Employee, EmployeeLoader } from '../employee-loader.service';
 })
 export default class EmployeeDetailComponent {
   private readonly loader = inject(EmployeeLoader);
-  employee: Observable<Employee> | undefined;
+  employee$: Observable<Employee> | undefined;
 
-  // This replaces
-  // route.paramMap.pipe(map(paramMap => paramMap.get('employeeId')));
-  @Input() set employeeId(id: string) {
-    this.employee = this.loader.getDetails(id).pipe(share());
+  readonly employeeId = input.required<string>();
+
+  constructor() {
+    effect(() => {
+      this.employee$ = this.loader
+        .getDetails(this.employeeId())
+        .pipe(share());
+    });
   }
 }

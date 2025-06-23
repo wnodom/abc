@@ -1,16 +1,14 @@
-<button (click)="toggleView()" [disabled]="showList">List</button>
-<button (click)="toggleView()" [disabled]="!showList">Grid</button>
+<button (click)="toggleView()" [disabled]="showList()">List</button>
+<button (click)="toggleView()" [disabled]="!showList()">Grid</button>
 
-@if (showList) {
+@if (showList()) {
   <app-employee-list
-    [employees]="myEmployees"
+    [employees]="myEmployees()"
     (selectEmp)="logEmployee($event)"
   />
-}
-
-@if (!showList) {
+} @else {
   <app-employee-grid
-    [employees]="myEmployees"
+    [employees]="myEmployees()"
     (selectEmp)="logEmployee($event)"
   />
 }

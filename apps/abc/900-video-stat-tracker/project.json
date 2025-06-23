@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/900-video-stat-tracker/src/index.html",
         "browser": "apps/abc/900-video-stat-tracker/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/900-video-stat-tracker/tsconfig.app.json",
         "assets": [
           "apps/abc/900-video-stat-tracker/src/favicon.ico",

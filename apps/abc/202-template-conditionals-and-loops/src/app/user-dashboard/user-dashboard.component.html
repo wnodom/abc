@@ -1,7 +1,7 @@
 <article>
   <header>Profile</header>
 
-  @if (showProfile) {
+  @if (showProfile()) {
     <div>
       Phone number: 555-123-1345
       <br />
@@ -15,8 +15,8 @@
   }
 
   <footer>
-    <button (click)="showProfile = !showProfile">
-      {{ showProfile ? 'Hide' : 'Show' }} Profile
+    <button class="btn" (click)="showProfile.set(!showProfile())">
+      {{ showHideProfileMessage() }}
     </button>
   </footer>
 </article>
@@ -25,7 +25,7 @@
   <header>Todo List</header>
 
   <ul class="collection todo-list">
-    @for (todo of todos; track todo) {
+    @for (todo of todos(); track todo) {
       <li>
         {{ todo.label }}
       </li>

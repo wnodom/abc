@@ -1,4 +1,4 @@
-# Workshop for this step
+# Workshop
 
 - In an earlier workshop, you likely set up a plain HTML control in
   one of your components, for example to turn an age range on or off.

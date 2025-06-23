@@ -3,10 +3,11 @@ import { Injectable, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, map, shareReplay, switchMap } from 'rxjs';
 
-const apiUrl = '/api';
+// Local API server
+// const apiUrl = '/api';
 
-// Or connect to the hosted demo API (works from StackBlitz):
-// const apiUrl = 'https://api.angularbootcamp.com';
+// Hosted API server
+const apiUrl = 'https://api.angularbootcamp.com';
 
 export interface Employee {
   id: number;

@@ -1,9 +1,7 @@
 <div class="banner">
-  @let colorScheme = colorScheme$ | async;
-
   <a href="https://angularbootcamp.com/" target="_blank">
     <img
-      src="assets/abc-logo-{{ colorScheme }}-mode.svg"
+      src="assets/abc-logo-{{ colorScheme() }}-mode.svg"
       alt="Angular Boot Camp"
     />
   </a>
@@ -12,7 +10,7 @@
 
   <a href="https://oasisdigital.com/" target="_blank">
     <img
-      src="assets/od-logo-with-valiantys-{{ colorScheme }}-mode.svg"
+      src="assets/od-logo-with-valiantys-{{ colorScheme() }}-mode.svg"
       alt="Oasis Digital, a Valiantys Company"
     />
   </a>
@@ -55,16 +53,10 @@
   </p>
 </div>
 
-<div class="events">
-  <h5>Event and Training Schedule</h5>
-
-  <iframe src="https://oasisdigital.com/schedule"></iframe>
-</div>
-
 <div class="call-to-action">
   <p>
     Learn more at
-    <a href="https://oasisdigital.com/" target="_blank">
+    <a href="https://oasisdigital.com/training" target="_blank">
       oasisdigital.com
     </a>
   </p>

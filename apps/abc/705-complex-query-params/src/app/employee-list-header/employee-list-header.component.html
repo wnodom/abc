@@ -1,9 +1,11 @@
-<div class="pointer" (click)="clicked.emit(propertyName)">
-  {{ display }}
-  @if (options?.sortBy === propertyName) {
+@let opts = options();
+
+<div class="pointer" (click)="clicked.emit(propertyName())">
+  {{ display() }}
+  @if (opts?.sortBy === propertyName()) {
     <i class="material-icons">
       {{
-        options?.sortDirection === 'asc'
+        opts?.sortDirection === 'asc'
           ? 'arrow_drop_down'
           : 'arrow_drop_up'
       }}

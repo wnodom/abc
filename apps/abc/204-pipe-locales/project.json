@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/204-pipe-locales/src/index.html",
         "browser": "apps/abc/204-pipe-locales/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/204-pipe-locales/tsconfig.app.json",
         "assets": [
           "apps/abc/204-pipe-locales/src/favicon.ico",

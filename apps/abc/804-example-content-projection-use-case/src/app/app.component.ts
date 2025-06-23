@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 import {
   AnnouncementComponent,
@@ -9,10 +9,30 @@ import {
   CollectionPanelChildrenComponent
 } from './collection-panel.component';
 
-export interface IAnnouncement {
+export interface Announcement {
   title: string;
   image: string;
   description: string;
+}
+
+function sampleAnnouncements() {
+  const descriptions = [
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sodales velit leo, id vestibulum risus maximus eget.',
+    'Ut arcu eros, blandit ac sem vel, tincidunt efficitur risus. Curabitur tempor sapien massa, in bibendum mauris.',
+    'Duis congue velit a nibh auctor hendrerit. In sollicitudin pulvinar magna ut vulputate. Duis semper, est maximus.'
+  ];
+
+  const arr: Announcement[] = [];
+
+  for (let x = 0; x < 6; x++) {
+    arr.push({
+      title: `Announcement ${x + 1}`,
+      image: `./assets/image${(x % 2) + 1}.jpg`,
+      description: descriptions[x % 3]
+    });
+  }
+
+  return arr;
 }
 
 @Component({
@@ -27,20 +47,5 @@ export interface IAnnouncement {
   ]
 })
 export class AppComponent {
-  announcements: IAnnouncement[] = [];
-  descriptions: string[] = [
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sodales velit leo, id vestibulum risus maximus eget.',
-    'Ut arcu eros, blandit ac sem vel, tincidunt efficitur risus. Curabitur tempor sapien massa, in bibendum mauris.',
-    'Duis congue velit a nibh auctor hendrerit. In sollicitudin pulvinar magna ut vulputate. Duis semper, est maximus.'
-  ];
-
-  constructor() {
-    for (let x = 0; x < 6; x++) {
-      this.announcements.push({
-        title: 'Announcement: ' + (x + 1),
-        image: './assets/image' + ((x % 2) + 1) + '.jpg',
-        description: this.descriptions[x % 3]
-      });
-    }
-  }
+  announcements = signal<Announcement[]>(sampleAnnouncements());
 }

@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/714-directives/src/index.html",
         "browser": "apps/abc/714-directives/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/714-directives/tsconfig.app.json",
         "assets": [
           "apps/abc/714-directives/src/favicon.ico",

@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/702-custom-validators/src/index.html",
         "browser": "apps/abc/702-custom-validators/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/702-custom-validators/tsconfig.app.json",
         "assets": [
           "apps/abc/702-custom-validators/src/favicon.ico",

@@ -1,4 +1,4 @@
-import { Directive, Input } from '@angular/core';
+import { Directive, model } from '@angular/core';
 
 @Directive({
   selector: '[appHighlight]',
@@ -7,9 +7,9 @@ import { Directive, Input } from '@angular/core';
   }
 })
 export class HighlightDirective {
-  @Input() color = 'var(--abc-highlight-color)';
+  readonly color = model('var(--abc-highlight-color)');
 
   getBackgroundColor() {
-    return this.color;
+    return this.color();
   }
 }

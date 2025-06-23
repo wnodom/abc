@@ -1,4 +1,4 @@
-# Workshop for this step
+# Workshop
 
 There is no workshop for the specific piece of technology in the step,
 but your instructor may use this context to make some more progress on

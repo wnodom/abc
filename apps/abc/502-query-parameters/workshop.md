@@ -1,4 +1,4 @@
-# Workshop for this step
+# Workshop
 
 * Update the list to navigate whenever a video is clicked using
   routerLink, rather than emitting an event.

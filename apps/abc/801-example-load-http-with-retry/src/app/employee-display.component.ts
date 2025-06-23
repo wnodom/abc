@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 import { Employee } from './employee';
 
@@ -7,5 +7,5 @@ import { Employee } from './employee';
   templateUrl: './employee-display.component.html'
 })
 export class EmployeeDisplayComponent {
-  @Input({ required: true }) employee: Employee | undefined;
+  readonly employee = input.required<Employee | undefined>();
 }
