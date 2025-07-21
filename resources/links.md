@@ -1,154 +1,173 @@
 # Resources
 
-Angular Boot Camp
-[link](https://angularbootcamp.com)
+Angular Boot Camp  
+https://angularbootcamp.com
 
-Angular Boot Camp Class Materials (Download)
-[link](http://angularbootcamp.com/abc.zip)
+Angular Boot Camp Class Materials (Download)  
+http://angularbootcamp.com/abc.zip
 
-Angular Boot Camp Class Materials (Online)
-[link](https://github.com/angularbootcamp)
+Angular Boot Camp Class Materials (Online)  
+https://github.com/angularbootcamp
 
+---
 
-Oasis Digital
-[link](https://oasisdigital.com)
+Oasis Digital  
+https://oasisdigital.com  
 
-Oasis Digital Training
-[link](https://oasisdigital.com/training)
+Oasis Digital Training  
+https://oasisdigital.com/training
 
-Oasis Digital YouTube Channel
-[link](https://www.youtube.com/user/OasisDigitalSoftware)
+Oasis Digital YouTube Channel  
+https://www.youtube.com/user/OasisDigitalSoftware
 
+Valiantys  
+https://valiantys.com/
 
-Angular
-[link](https://angular.dev)
+Valiantys Training Services  
+https://valiantys.com/en/service/training-coaching/
 
-Angular GitHub
-[link](https://github.com/angular)
+---
 
-Angular Blog
-[link](https://blog.angular.dev)
+Angular  
+https://angular.dev
 
-Angular YouTube Channel
-[link](https://www.youtube.com/angular)
+Angular GitHub  
+https://github.com/angular
 
-Angular CLI
-[link](https://angular.dev/tools/cli)
+Angular Blog  
+https://blog.angular.dev
 
-Angular DevTools
-[link](https://angular.dev/tools/devtools)
+Angular YouTube Channel  
+https://www.youtube.com/angular
 
-Angular Language Service
-[link](https://angular.dev/tools/language-service)
+Angular CLI  
+https://angular.dev/tools/cli
 
-Angular Style Guide
-[link](https://angular.dev/style-guide)
+Angular DevTools  
+https://angular.dev/tools/devtools
 
-Angular Update Guide
-[link](https://angular.dev/update-guide)
+Angular Language Service  
+https://angular.dev/tools/language-service
 
-Angular Accessibility (a11y)
-[link](https://angular.dev/best-practices/a11y)
+Angular Style Guide  
+https://angular.dev/style-guide
 
-Angular Internationalization (i18n)
-[link](https://angular.dev/guide/i18n)
+Angular AI  
+https://angular.dev/ai
 
-Angular Material
-[link](https://material.angular.dev)
+Angular Update Guide  
+https://angular.dev/update-guide
 
-Angular Component Development Kit (CDK)
-[link](https://material.angular.dev/cdk)
+Angular Accessibility (a11y)  
+https://angular.dev/best-practices/a11y
 
+Angular Internationalization (i18n)  
+https://angular.dev/guide/i18n
 
-Baseline
-[link](https://web-platform-dx.github.io/web-features)
+Angular Material  
+https://material.angular.dev
 
-Can I Use...
-[link](https://caniuse.com)
+Angular Component Development Kit (CDK)  
+https://material.angular.dev/cdk
 
-MDN Web Docs
-[link](https://developer.mozilla.org)
+Angular ESLint  
+https://github.com/angular-eslint/angular-eslint
 
-web.dev
-[link](https://web.dev)
+---
 
-web.dev Angular
-[link](https://web.dev/explore/angular)
+Baseline  
+https://web-platform-dx.github.io/web-features
 
-web.dev Accessibility (a11y)
-[link](https://web.dev/accessibility)
+Can I Use...  
+https://caniuse.com
 
+MDN Web Docs  
+https://developer.mozilla.org
 
-Node.js
-[link](https://nodejs.org)
+web.dev  
+https://web.dev
 
-npm
-[link](https://www.npmjs.com)
+web.dev Angular  
+https://web.dev/explore/angular
 
-ESLint
-[link](https://eslint.org)
+web.dev Accessibility (a11y)  
+https://web.dev/accessibility
 
-Prettier
-[link](https://prettier.io)
+---
 
-Nx
-[link](https://nx.dev)
+Node.js  
+https://nodejs.org
 
+npm  
+https://www.npmjs.com
 
-MDN CSS
-[link](https://developer.mozilla.org/en-US/docs/Web/CSS)
+ESLint  
+https://eslint.org
 
-web.dev CSS
-[link](https://web.dev/css)
+Prettier  
+https://prettier.io
 
-Sass - CSS Preprocessor Scripting Language
-[link](https://sass-lang.com)
+Nx  
+https://nx.dev
 
-CSS Videos from Kevin Powell
-[link](https://youtube.com/@kevinpowell)
+---
 
-Layout Land
-[link](https://youtube.com/@layoutland)
+MDN CSS  
+https://developer.mozilla.org/en-US/docs/Web/CSS
 
-Grid By Example
-[link](https://gridbyexample.com)
+web.dev CSS  
+https://web.dev/css
 
+Sass - CSS Preprocessor Scripting Language  
+https://sass-lang.com
 
-TypeScript
-[link](https://www.typescriptlang.org)
+CSS Videos from Kevin Powell  
+https://youtube.com/@kevinpowell
 
-TypeScript Videos from Matt Pocock
-[link](https://www.youtube.com/@mattpocockuk)
+Layout Land from Jen Simmons  
+https://youtube.com/@layoutland
 
+Grid By Example from Rachel Andrew  
+https://gridbyexample.com
 
-RxJS - Reactive Extensions Library for JavaScript
-[link](https://rxjs.dev)
+---
 
-RxJS Operator Decision Tree
-[link](https://rxjs.dev/operator-decision-tree)
+TypeScript  
+https://www.typescriptlang.org
 
-RxMarbles - Interactive diagrams of Rx Observables
-[link](https://rxmarbles.com)
-
-NgRx - Reactive State for Angular
-[link](https://ngrx.io)
-
-
-ng-news
-[link](https://www.youtube.com/@ng-news)
-
-Angular Air Livestream / Podcast
-[link](https://angularair.com)
-
-The Angular Plus Show Podcast
-[link](https://ng.show)
-
-ng-conf YouTube
-[link](https://www.youtube.com/@ngconfonline)
+TypeScript Videos from Matt Pocock  
+https://www.youtube.com/@mattpocockuk
 
 
-Microsoft Visual Studio Code Editor
-[link](https://code.visualstudio.com)
+RxJS - Reactive Extensions Library for JavaScript  
+https://rxjs.dev
 
-JetBrains WebStorm JavaScript IDE
-[link](https://www.jetbrains.com/webstorm)
+RxJS Operator Decision Tree  
+https://rxjs.dev/operator-decision-tree
+
+RxMarbles - Interactive diagrams of Rx Observables  
+https://rxmarbles.com
+
+NgRx - Reactive State for Angular  
+https://ngrx.io
+
+
+ng-news  
+https://www.youtube.com/@ng-news
+
+Angular Air Livestream / Podcast  
+https://angularair.com
+
+The Angular Plus Show Podcast  
+https://ng.show
+
+ng-conf YouTube  
+https://www.youtube.com/@ngconfonline
+
+---
+
+Microsoft Visual Studio Code Editor  
+https://code.visualstudio.com
+
+JetBrains WebStorm JavaScript IDE  
+https://www.jetbrains.com/webstorm
