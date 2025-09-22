@@ -92,7 +92,8 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/abc/818-legacy-constructor-based-injection/jest.config.ts"
+        "jestConfig": "apps/abc/818-legacy-constructor-based-injection/jest.config.ts",
+        "tsConfig": "apps/abc/818-legacy-constructor-based-injection/tsconfig.spec.json"
       }
     },
     "serve-static": {

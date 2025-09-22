@@ -45,7 +45,7 @@ export class RedditSearchComponent {
     const validSearch = this.search.valueChanges.pipe(
       startWith(this.search.value),
       map(search => search.trim()),
-      debounceTime(200),
+      debounceTime(350),
       distinctUntilChanged(),
       filter(search => search !== '')
     );

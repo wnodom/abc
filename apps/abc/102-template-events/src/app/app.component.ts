@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { scheduleMap } from './app.constants';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
   name = 'John Doe';

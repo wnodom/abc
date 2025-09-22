@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
       explore here. See the instructor's presentation to learn how to
       set up your own project.
     </p>
-  `
+  `,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {}

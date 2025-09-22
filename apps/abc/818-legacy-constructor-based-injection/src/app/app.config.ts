@@ -18,7 +18,13 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(),
     {
       provide: CONSTELLATION_LOADER_CONFIG,
-      useValue: { endpoint: '/api/constellations' }
+      useValue: {
+        // Hosted API server
+        endpoint: 'https://api.angularbootcamp.com/constellations'
+
+        // Local API server
+        // endpoint: '/api/constellations',
+      }
     }
   ]
 };

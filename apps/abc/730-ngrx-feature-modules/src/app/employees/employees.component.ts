@@ -19,7 +19,7 @@ import {
       </ul>
     </nav>
 
-    <router-outlet></router-outlet>
+    <router-outlet />
   `,
   imports: [RouterLinkActive, RouterLink, RouterOutlet]
 })

@@ -45,12 +45,12 @@ export const ArticleStore = signalStore(
         pipe(
           concatMap(() => {
             return articleLoaderService.load().pipe(
-              tapResponse(
-                newArticles =>
+              tapResponse({
+                next: newArticles =>
                   patchState(state, setAllEntities(newArticles)),
-                error =>
+                error: error =>
                   console.error('Error with Load Articles', error)
-              )
+              })
             );
           })
         )
@@ -59,12 +59,12 @@ export const ArticleStore = signalStore(
         pipe(
           concatMap(article => {
             return articleLoaderService.create(article).pipe(
-              tapResponse(
-                newArticle =>
+              tapResponse({
+                next: newArticle =>
                   patchState(state, addEntity(newArticle)),
-                error =>
+                error: error =>
                   console.error('Error with Create Article', error)
-              )
+              })
             );
           })
         )
@@ -81,11 +81,12 @@ export const ArticleStore = signalStore(
           ),
           concatMap(article => {
             return articleLoaderService.delete(article).pipe(
-              tapResponse(
-                () => patchState(state, removeEntity(article.id)),
-                error =>
+              tapResponse({
+                next: () =>
+                  patchState(state, removeEntity(article.id)),
+                error: error =>
                   console.error('Error with Delete Article', error)
-              )
+              })
             );
           })
         )
@@ -94,8 +95,8 @@ export const ArticleStore = signalStore(
         pipe(
           concatMap(article => {
             return articleLoaderService.update(article).pipe(
-              tapResponse(
-                updatedArticle =>
+              tapResponse({
+                next: updatedArticle =>
                   patchState(
                     state,
                     updateEntity({
@@ -103,9 +104,9 @@ export const ArticleStore = signalStore(
                       changes: updatedArticle
                     })
                   ),
-                error =>
+                error: error =>
                   console.error('Error with Update Article', error)
-              )
+              })
             );
           })
         )
