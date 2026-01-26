@@ -13,34 +13,26 @@ export const appRoutes: Route[] = [
     path: 'constellation-viewer-using-constructor',
     providers: [LoggerService],
     loadComponent: () =>
-      import(
-        './constellation-viewer-using-constructor/constellation-viewer.component'
-      )
+      import('./constellation-viewer-using-constructor/constellation-viewer.component')
   },
 
   {
     path: 'constellation-viewer-using-constructor/:id',
     providers: [LoggerService],
     loadComponent: () =>
-      import(
-        './constellation-viewer-using-constructor/constellation-viewer.component'
-      )
+      import('./constellation-viewer-using-constructor/constellation-viewer.component')
   },
 
   {
     path: 'constellation-viewer-using-inject',
     loadComponent: () =>
-      import(
-        './constellation-viewer-using-inject/constellation-viewer.component'
-      )
+      import('./constellation-viewer-using-inject/constellation-viewer.component')
   },
 
   {
     path: 'constellation-viewer-using-inject/:id',
     loadComponent: () =>
-      import(
-        './constellation-viewer-using-inject/constellation-viewer.component'
-      )
+      import('./constellation-viewer-using-inject/constellation-viewer.component')
   },
 
   {

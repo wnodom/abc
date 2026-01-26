@@ -1,5 +1,7 @@
-export interface FilterOptions
-  extends Record<string, string | number | boolean> {
+export interface FilterOptions extends Record<
+  string,
+  string | number | boolean
+> {
   region: string;
   dateTo: string;
   dateFrom: string;

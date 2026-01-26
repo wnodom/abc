@@ -10,8 +10,6 @@ export const appRoutes: Routes = [
   {
     path: 'individual-comparator',
     loadComponent: () =>
-      import(
-        './individual-comparator/individual-comparator.component'
-      )
+      import('./individual-comparator/individual-comparator.component')
   }
 ];

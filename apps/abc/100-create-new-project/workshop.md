@@ -53,7 +53,7 @@ Use your terminal to navigate to the desired location for your new
 project. Once you are there, type the following command:
 
 ```bash
-npx @angular/cli new workshop-app
+npx @angular/cli@latest new workshop-app
 ```
 
 This command will create a new folder for your project and initialize
@@ -90,7 +90,7 @@ well with ESLint and the Angular ESLint package.
 You can add them with this command:
 
 ```bash
-npx ng add @angular-eslint/schematics
+npx ng add angular-eslint
 ```
 
 ## Step 5: Add a third-party CSS library (Optional)
