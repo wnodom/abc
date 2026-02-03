@@ -1,4 +1,9 @@
-import { Component, computed, signal } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  computed,
+  signal
+} from '@angular/core';
 
 const meetings = [
   {
@@ -20,7 +25,8 @@ const todoList = [
 
 @Component({
   selector: 'app-user-dashboard',
-  templateUrl: './user-dashboard.component.html'
+  templateUrl: './user-dashboard.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class UserDashboardComponent {
   showProfile = signal(true);

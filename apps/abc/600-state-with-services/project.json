@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/600-state-with-services/src/index.html",
         "browser": "apps/abc/600-state-with-services/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/600-state-with-services/tsconfig.app.json",
         "assets": [
           "apps/abc/600-state-with-services/src/favicon.ico",

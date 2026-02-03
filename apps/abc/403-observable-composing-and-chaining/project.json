@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/403-observable-composing-and-chaining/src/index.html",
         "browser": "apps/abc/403-observable-composing-and-chaining/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/403-observable-composing-and-chaining/tsconfig.app.json",
         "assets": [
           "apps/abc/403-observable-composing-and-chaining/src/favicon.ico",

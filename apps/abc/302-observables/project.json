@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/302-observables/src/index.html",
         "browser": "apps/abc/302-observables/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/302-observables/tsconfig.app.json",
         "assets": [
           "apps/abc/302-observables/src/favicon.ico",

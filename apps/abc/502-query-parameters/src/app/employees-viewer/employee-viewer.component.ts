@@ -1,5 +1,9 @@
 import { AsyncPipe } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  inject
+} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, map, of, switchMap } from 'rxjs';
 
@@ -18,7 +22,8 @@ import { EmployeeLoaderService } from '../employee-loader.service';
     EmployeeListComponent,
     EmployeeDetailComponent,
     AsyncPipe
-  ]
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class EmployeeViewerComponent {
   filteredList: Observable<Employee[]>;

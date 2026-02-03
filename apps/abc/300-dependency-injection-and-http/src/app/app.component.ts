@@ -1,5 +1,10 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  inject,
+  signal
+} from '@angular/core';
 
 // Local API server
 // const apiUrl = '/api';
@@ -15,11 +20,12 @@ interface Employee {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
-  employees: Employee[] = [];
-  loading = true;
+  employees = signal<Employee[]>([]);
+  loading = signal(true);
 
   constructor() {
     const http = inject(HttpClient);
@@ -27,8 +33,8 @@ export class AppComponent {
     http
       .get<Employee[]>(apiUrl + '/employees')
       .subscribe(employees => {
-        this.loading = false;
-        this.employees = employees;
+        this.loading.set(false);
+        this.employees.set(employees);
       });
   }
 }

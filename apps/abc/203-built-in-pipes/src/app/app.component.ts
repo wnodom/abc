@@ -6,7 +6,11 @@ import {
   CurrencyPipe,
   DatePipe
 } from '@angular/common';
-import { Component, signal } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  signal
+} from '@angular/core';
 
 // prettier-ignore
 const recordList = [
@@ -30,7 +34,8 @@ const recordList = [
     PercentPipe,
     CurrencyPipe,
     DatePipe
-  ]
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
   reportDate = new Date('Dec 25, 2058');

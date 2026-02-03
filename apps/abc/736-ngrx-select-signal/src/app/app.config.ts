@@ -1,4 +1,3 @@
-import { provideHttpClient } from '@angular/common/http';
 import {
   ApplicationConfig,
   provideZoneChangeDetection
@@ -28,7 +27,6 @@ export const appConfig: ApplicationConfig = {
       maxAge: 50,
       logOnly: environment.production,
       trace: true
-    }),
-    provideHttpClient()
+    })
   ]
 };

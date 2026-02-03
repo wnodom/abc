@@ -1,4 +1,3 @@
-import { provideHttpClient } from '@angular/common/http';
 import { Routes } from '@angular/router';
 
 import { ClickComponent } from '../click/click.component';
@@ -11,7 +10,6 @@ const singlePlayerRoutes: Routes = [
     path: '',
     component: ClickComponent,
     providers: [
-      provideHttpClient(),
       {
         provide: ClickService,
         useClass: SinglePlayerService

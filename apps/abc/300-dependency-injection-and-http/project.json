@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/300-dependency-injection-and-http/src/index.html",
         "browser": "apps/abc/300-dependency-injection-and-http/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/300-dependency-injection-and-http/tsconfig.app.json",
         "assets": [
           "apps/abc/300-dependency-injection-and-http/src/favicon.ico",

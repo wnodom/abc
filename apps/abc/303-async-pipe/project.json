@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/303-async-pipe/src/index.html",
         "browser": "apps/abc/303-async-pipe/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/303-async-pipe/tsconfig.app.json",
         "assets": [
           "apps/abc/303-async-pipe/src/favicon.ico",

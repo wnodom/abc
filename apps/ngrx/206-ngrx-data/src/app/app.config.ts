@@ -1,4 +1,3 @@
-import { provideHttpClient } from '@angular/common/http';
 import {
   ApplicationConfig,
   provideZoneChangeDetection
@@ -27,7 +26,6 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideEffects(), // not needed in previous steps, but needed here
     provideEntityData(entityConfig, withEffects()),
-    provideHttpClient(),
     provideRouter(appRoutes),
     provideStore(reducers, { metaReducers }),
     provideRouterStore(),

@@ -1,8 +1,13 @@
-import { Component, input } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  input
+} from '@angular/core';
 
 @Component({
   selector: 'app-order-header',
-  templateUrl: './order-header.component.html'
+  templateUrl: './order-header.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class OrderHeaderComponent {
   readonly customer = input.required<string>({

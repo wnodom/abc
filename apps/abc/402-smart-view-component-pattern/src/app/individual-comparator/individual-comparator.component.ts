@@ -1,5 +1,9 @@
 import { AsyncPipe } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  inject
+} from '@angular/core';
 import { tap } from 'rxjs';
 
 import { EmployeeComparisonComponent } from '../employee-comparison/employee-comparison.component';
@@ -12,7 +16,8 @@ import { Employee, EmployeeLoader } from '../employee-loader.service';
     EmployeeComparisonComponent,
     EmployeeExplorerComponent,
     AsyncPipe
-  ]
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class IndividualComparatorComponent {
   private el = inject(EmployeeLoader);

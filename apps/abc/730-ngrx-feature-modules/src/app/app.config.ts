@@ -1,4 +1,3 @@
-import { provideHttpClient } from '@angular/common/http';
 import {
   ApplicationConfig,
   provideZoneChangeDetection
@@ -30,7 +29,6 @@ export const appConfig: ApplicationConfig = {
       logOnly: environment.production,
       trace: true
     }),
-    provideHttpClient(),
     provideRouter(appRoutes)
   ]
 };

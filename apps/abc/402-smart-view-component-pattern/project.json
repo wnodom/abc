@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/402-smart-view-component-pattern/src/index.html",
         "browser": "apps/abc/402-smart-view-component-pattern/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/402-smart-view-component-pattern/tsconfig.app.json",
         "assets": [
           "apps/abc/402-smart-view-component-pattern/src/favicon.ico",

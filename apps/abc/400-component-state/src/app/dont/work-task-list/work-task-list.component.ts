@@ -1,4 +1,9 @@
-import { Component, output, input } from '@angular/core';
+import {
+  Component,
+  output,
+  input,
+  ChangeDetectionStrategy
+} from '@angular/core';
 
 import { TodoListComponent } from '../../todo-list/todo-list.component';
 import { Task, TaskToggle } from '../../types';
@@ -11,7 +16,8 @@ import { Task, TaskToggle } from '../../types';
 @Component({
   selector: 'app-work-task-list',
   templateUrl: './work-task-list.component.html',
-  imports: [TodoListComponent]
+  imports: [TodoListComponent],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class WorkTaskListComponent {
   readonly done = input.required<Task[]>();

@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/301-injecting-custom-services/src/index.html",
         "browser": "apps/abc/301-injecting-custom-services/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/301-injecting-custom-services/tsconfig.app.json",
         "assets": [
           "apps/abc/301-injecting-custom-services/src/favicon.ico",

@@ -1,4 +1,3 @@
-import { provideHttpClient } from '@angular/common/http';
 import {
   ApplicationConfig,
   provideZoneChangeDetection
@@ -16,7 +15,6 @@ import { metaReducers, reducers } from './reducers';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
-    provideHttpClient(),
     provideRouter(appRoutes),
     provideStore(reducers, {
       metaReducers,

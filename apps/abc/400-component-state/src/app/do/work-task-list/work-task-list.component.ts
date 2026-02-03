@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  signal
+} from '@angular/core';
 
 import { TodoListComponent } from '../../todo-list/todo-list.component';
 import { Task } from '../../types';
@@ -6,31 +10,36 @@ import { Task } from '../../types';
 @Component({
   selector: 'app-work-task-list',
   templateUrl: './work-task-list.component.html',
-  imports: [TodoListComponent]
+  imports: [TodoListComponent],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class WorkTaskListComponent {
-  done = [
+  done = signal<Task[]>([
     { label: 'file paperwork' },
     { label: 'send emails' },
     { label: 'work on project A' },
     { label: 'submit report to manager' }
-  ];
+  ]);
 
-  todo = [
+  todo = signal<Task[]>([
     { label: 'work on project B' },
     { label: 'update task list' }
-  ];
+  ]);
 
   checkbox = 'check_box';
   outline = 'check_box_outline_blank';
 
   toggleTask(task: Task, complete: boolean) {
     if (complete) {
-      this.done = this.done.filter(curTask => curTask !== task);
-      this.todo.push(task);
+      this.done.update(arr =>
+        arr.filter(curTask => curTask !== task)
+      );
+      this.todo.update(arr => [...arr, task]);
     } else {
-      this.todo = this.todo.filter(curTask => curTask !== task);
-      this.done.push(task);
+      this.todo.update(arr =>
+        arr.filter(curTask => curTask !== task)
+      );
+      this.done.update(arr => [...arr, task]);
     }
   }
 }

@@ -1,4 +1,3 @@
-import { provideHttpClient } from '@angular/common/http';
 import {
   ApplicationConfig,
   provideZoneChangeDetection
@@ -18,7 +17,6 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideEffects([AppEffects, HomeTasksEffects, WorkTasksEffects]),
-    provideHttpClient(),
     provideStore(reducers, {
       runtimeChecks: {
         strictStateSerializability: true,

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import {
   RouterLinkActive,
   RouterLink,
@@ -8,6 +8,7 @@ import {
 @Component({
   selector: 'app-payroll-screen',
   templateUrl: './payroll-screen.component.html',
-  imports: [RouterLinkActive, RouterLink, RouterOutlet]
+  imports: [RouterLinkActive, RouterLink, RouterOutlet],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PayrollScreenComponent {}

@@ -1,13 +1,18 @@
 import { AsyncPipe } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  inject
+} from '@angular/core';
 
 import { EmployeeLoaderService } from './employee-loader.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  imports: [AsyncPipe]
+  imports: [AsyncPipe],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
-  employees = inject(EmployeeLoaderService).loadEmployees();
+  employees$ = inject(EmployeeLoaderService).loadEmployees();
 }

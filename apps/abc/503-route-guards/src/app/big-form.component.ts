@@ -1,4 +1,8 @@
-import { Component, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  inject
+} from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -11,7 +15,8 @@ import { FormDeactivateCheck } from './form-deactive.guard';
 @Component({
   selector: 'app-big-form',
   templateUrl: './big-form.component.html',
-  imports: [ReactiveFormsModule]
+  imports: [ReactiveFormsModule],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BigFormComponent implements FormDeactivateCheck {
   bigFormGroup: FormGroup<{

@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  signal
+} from '@angular/core';
 
 import { Task } from '../types';
 
@@ -14,63 +18,64 @@ import { WorkTaskListComponent } from './work-task-list/work-task-list.component
 
 @Component({
   templateUrl: './dont.component.html',
-  imports: [WorkTaskListComponent, HomeTaskListComponent]
+  imports: [WorkTaskListComponent, HomeTaskListComponent],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class DontComponent {
-  doneWork = [
+  doneWork = signal<Task[]>([
     { label: 'file paperwork' },
     { label: 'send emails' },
     { label: 'work on project A' },
     { label: 'submit report to manager' }
-  ];
+  ]);
 
-  todoWork = [
+  todoWork = signal<Task[]>([
     { label: 'work on project B' },
     { label: 'update task list' }
-  ];
+  ]);
 
-  doneHome = [
+  doneHome = signal<Task[]>([
     { label: 'cook dinner' },
     { label: 'go grocery shopping' },
     { label: 'sweep the floors' },
     { label: 'do the laundry' }
-  ];
+  ]);
 
-  todoHome = [
+  todoHome = signal<Task[]>([
     { label: 'fix the leaky faucet' },
     { label: 'mow the lawn' }
-  ];
+  ]);
 
   // This method is a perfect example of the complexity that's created when
   // all of your state is managed from one location.
   toggleTask(task: Task, complete: boolean, type: string) {
     if (complete && type === 'work') {
-      this.doneWork = this.doneWork.filter(
-        curTask => curTask !== task
+      this.doneWork.update(arr =>
+        arr.filter(curTask => curTask !== task)
       );
-      this.todoWork.push(task);
+      this.todoWork.update(arr => [...arr, task]);
     } else if (!complete && type === 'work') {
-      this.todoWork = this.todoWork.filter(
-        curTask => curTask !== task
+      this.todoWork.update(arr =>
+        arr.filter(curTask => curTask !== task)
       );
-      this.doneWork.push(task);
+      this.doneWork.update(arr => [...arr, task]);
     } else if (complete && type === 'home') {
-      this.doneHome = this.doneHome.filter(
-        curTask => curTask !== task
+      this.doneHome.update(arr =>
+        arr.filter(curTask => curTask !== task)
       );
-      this.todoHome.push(task);
+      this.todoHome.update(arr => [...arr, task]);
     } else if (!complete && type === 'home') {
-      this.todoHome = this.todoHome.filter(
-        curTask => curTask !== task
+      this.todoHome.update(arr =>
+        arr.filter(curTask => curTask !== task)
       );
-      this.doneHome.push(task);
+      this.doneHome.update(arr => [...arr, task]);
     }
   }
 
   completeAll() {
-    this.todoHome.forEach(task => this.doneHome.push(task));
-    this.todoHome = [];
-    this.todoWork.forEach(task => this.doneWork.push(task));
-    this.todoWork = [];
+    this.doneHome.update(arr => [...arr, ...this.todoHome()]);
+    this.doneWork.update(arr => [...arr, ...this.todoWork()]);
+    this.todoHome.set([]);
+    this.todoWork.set([]);
   }
 }

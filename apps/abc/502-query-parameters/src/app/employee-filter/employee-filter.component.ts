@@ -1,4 +1,9 @@
-import { Component, OnDestroy, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  OnDestroy,
+  inject
+} from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import {
@@ -11,7 +16,8 @@ import {
 @Component({
   selector: 'app-employee-filter',
   templateUrl: './employee-filter.component.html',
-  imports: [ReactiveFormsModule]
+  imports: [ReactiveFormsModule],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EmployeeFilterComponent implements OnDestroy {
   private router = inject(Router);

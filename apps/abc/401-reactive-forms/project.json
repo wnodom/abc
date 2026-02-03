@@ -16,7 +16,7 @@
         },
         "index": "apps/abc/401-reactive-forms/src/index.html",
         "browser": "apps/abc/401-reactive-forms/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/abc/401-reactive-forms/tsconfig.app.json",
         "assets": [
           "apps/abc/401-reactive-forms/src/favicon.ico",

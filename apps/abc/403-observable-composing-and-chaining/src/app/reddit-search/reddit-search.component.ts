@@ -1,5 +1,9 @@
 import { AsyncPipe } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  inject
+} from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import {
   Observable,
@@ -20,7 +24,8 @@ import { ImageMetadata } from './types';
   selector: 'app-reddit-search',
   templateUrl: './reddit-search.component.html',
   styleUrl: './reddit-search.component.scss',
-  imports: [ReactiveFormsModule, AsyncPipe]
+  imports: [ReactiveFormsModule, AsyncPipe],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RedditSearchComponent {
   subReddits = [

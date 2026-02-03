@@ -1,4 +1,10 @@
-import { Component, OnDestroy, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  OnDestroy,
+  inject,
+  signal
+} from '@angular/core';
 
 import {
   Employee,
@@ -7,17 +13,18 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnDestroy {
-  employees: Employee[] = [];
-  loading = true;
+  employees = signal<Employee[]>([]);
+  loading = signal(true);
 
   subscription = inject(EmployeeLoaderService)
     .loadEmployees()
     .subscribe(employees => {
-      this.employees = employees;
-      this.loading = false;
+      this.loading.set(false);
+      this.employees.set(employees);
     });
 
   // Since this component doesn't know the "source" of the observable,

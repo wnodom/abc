@@ -1,4 +1,8 @@
-import { Component, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  inject
+} from '@angular/core';
 
 import { HomeTaskListComponent } from './home-task-list/home-task-list.component';
 import { HomeTaskListService } from './home-task-list/home-task-list.service';
@@ -9,7 +13,8 @@ import { WorkTaskListService } from './work-task-list/work-task-list.service';
   selector: 'app-notification-manager',
   templateUrl: './notification-manager.component.html',
   styleUrl: './notification-manager.component.scss',
-  imports: [WorkTaskListComponent, HomeTaskListComponent]
+  imports: [WorkTaskListComponent, HomeTaskListComponent],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NotificationManagerComponent {
   private workTaskListService = inject(WorkTaskListService);

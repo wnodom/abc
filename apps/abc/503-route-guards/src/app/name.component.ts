@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-some-name',
@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
       <header>Hello Again!</header>
       This is another example component.
     </article>
-  `
+  `,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NameComponent {}

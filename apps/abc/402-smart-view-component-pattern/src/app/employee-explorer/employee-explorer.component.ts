@@ -1,4 +1,9 @@
-import { Component, output, input } from '@angular/core';
+import {
+  Component,
+  output,
+  input,
+  ChangeDetectionStrategy
+} from '@angular/core';
 // import { FormControl } from '@angular/forms';
 
 import { EmployeeDisplayComponent } from '../employee-display/employee-display.component';
@@ -8,7 +13,8 @@ import { Employee } from '../employee-loader.service';
   selector: 'app-employee-explorer',
   templateUrl: './employee-explorer.component.html',
   styleUrl: './employee-explorer.component.scss',
-  imports: [EmployeeDisplayComponent]
+  imports: [EmployeeDisplayComponent],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EmployeeExplorerComponent {
   // Note that this one isn't required -- the default value is used in

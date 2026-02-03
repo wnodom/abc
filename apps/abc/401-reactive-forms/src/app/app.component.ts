@@ -1,5 +1,9 @@
 import { JsonPipe } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  inject
+} from '@angular/core';
 import {
   FormBuilder,
   FormControl,
@@ -12,7 +16,8 @@ import {
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  imports: [ReactiveFormsModule, JsonPipe]
+  imports: [ReactiveFormsModule, JsonPipe],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
   // Consider using NonNullableFormBuilder if you never set or want to

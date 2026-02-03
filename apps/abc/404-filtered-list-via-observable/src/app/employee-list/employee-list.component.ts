@@ -1,5 +1,9 @@
 import { AsyncPipe } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  inject
+} from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import {
   Observable,
@@ -25,7 +29,8 @@ import { EmployeeLoaderService } from '../employee-loader.service';
     EmployeeListTableViewComponent,
     EmployeeDetailComponent,
     ReactiveFormsModule
-  ]
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EmployeeListComponent {
   // We make sure that the sort options will always have a value

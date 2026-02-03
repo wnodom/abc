@@ -1,4 +1,8 @@
-import { Component, signal } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  signal
+} from '@angular/core';
 
 const employees = [
   {
@@ -22,7 +26,8 @@ const employees = [
 
 @Component({
   selector: 'app-employee-browser',
-  templateUrl: './employee-browser.component.html'
+  templateUrl: './employee-browser.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class EmployeeBrowserComponent {
   employeeList = employees;

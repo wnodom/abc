@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { SearchBoxComponent } from '../../search/search-box.component';
 
@@ -11,6 +11,7 @@ import { SearchBoxComponent } from '../../search/search-box.component';
       <app-search-box />
     </article>
   `,
-  imports: [SearchBoxComponent]
+  imports: [SearchBoxComponent],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PayrollSearchComponent {}

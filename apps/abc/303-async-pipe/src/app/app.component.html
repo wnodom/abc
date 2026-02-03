@@ -2,9 +2,9 @@
   <header>Top 5 employees</header>
 
   <!-- The "loading display" functionality is now done entirely in the template -->
-  @if (employees | async; as emps) {
+  @if (employees$ | async; as employees) {
     <ul>
-      @for (e of emps; track e.id) {
+      @for (e of employees; track e.id) {
         <li>{{ e.firstName }} {{ e.lastName }}</li>
       }
     </ul>

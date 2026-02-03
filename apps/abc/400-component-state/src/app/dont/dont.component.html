@@ -1,14 +1,14 @@
 <div class="task-lists">
   <app-work-task-list
-    [done]="doneWork"
-    [todo]="todoWork"
+    [done]="doneWork()"
+    [todo]="todoWork()"
     (toggleTask)="toggleTask($event.task, $event.complete, 'work')"
   />
 
   <app-home-task-list
     (toggleTask)="toggleTask($event.task, $event.complete, 'home')"
-    [done]="doneHome"
-    [todo]="todoHome"
+    [done]="doneHome()"
+    [todo]="todoHome()"
   />
 </div>
 
